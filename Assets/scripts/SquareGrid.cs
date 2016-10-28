@@ -9,7 +9,8 @@ public class SquareGrid  {
 	 * A square-grid has boundarys, 
 	 * Hashtable for deployment
 	 * <converting the integer grids to assets>
-	 * Hashtable for MDPs
+	 * consider using extra structure in grid_node
+	 * for computing MDP.
 	 * ===============================*/
 	public int Width,Height;
 	public List<grid_node> nodes;
@@ -50,7 +51,7 @@ public class SquareGrid  {
 
 	}
 
-
+	//is this grid walkable?[obstacles,out of boundary]
 	public bool walkable(grid_node n){
 		bool x_in_range=(n.grid_position._x<this.Width)&&(n.grid_position._x>=0);
 		bool y_in_range=(n.grid_position._y<this.Height)&&(n.grid_position._y>=0);
@@ -59,7 +60,7 @@ public class SquareGrid  {
 	}
 
 
-
+	//what is the neighbour of this grid if I move at orientation o?
 	public grid_node get_neighbour(grid_node n,orientation o){
 		V2Int nb_pos=n.grid_position+(V2Int)orient[o];
 		grid_node nb=nodes.Find(such_node=>such_node.grid_position==nb_pos);
@@ -69,6 +70,7 @@ public class SquareGrid  {
 		return null;
 	}
 
+	//All my neighbours. For MDP computation.
 	public List<grid_node> my_neighbours(grid_node n){
 		List<grid_node> neighbour=new List<grid_node>();
 		foreach(orientation o in Four_dir){

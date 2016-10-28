@@ -34,6 +34,7 @@ public class player_behave : moving {
 				move_to_grid(sg,target);
 			}
 		}
-	
 	}
+
+
 }

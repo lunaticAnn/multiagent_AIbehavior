@@ -13,7 +13,6 @@ public class GridsGenerator : MonoBehaviour {
 	private int[,] test=new int[3,4]{{0,0,0,0},{9,1,-1,0},{0,0,0,1}};
 	private V2Int player_pos=new V2Int(0,0);	 
 
-	Hashtable pos_to_obj;
 	public SquareGrid g;
 
 
@@ -29,7 +28,6 @@ public class GridsGenerator : MonoBehaviour {
 	 * Player_pos V2Int
 	 * AI_pos V2Int[nums]
 	 * Envador_pos V2Int[nums]
-	 * 
 	 * =================================================
 	*/
 
@@ -39,7 +37,7 @@ public class GridsGenerator : MonoBehaviour {
 		Instantiate(player_prefab);
 	}
 
-
+	//This is also bullshit. 
 	void Update(){
 		if(Input.GetMouseButtonDown(0)){
 			Ray r=Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -53,6 +51,7 @@ public class GridsGenerator : MonoBehaviour {
 		}
 
 	}
+
 
 	IEnumerator flash_them(List<grid_node> nbs){
 		foreach(grid_node nb in nbs){
@@ -69,7 +68,10 @@ public class GridsGenerator : MonoBehaviour {
 
 
 	public SquareGrid Init_grid(int[,] int_grid){
-		pos_to_obj=new Hashtable();
+		/*======================================
+		 * Initialize the grid with a integer matrix.
+		========================================*/
+
 		SquareGrid sg=new SquareGrid(int_grid.GetLength(1),int_grid.GetLength(0));
 
 		for(int coord_x=0;coord_x<sg.Width;coord_x++)
@@ -92,8 +94,6 @@ public class GridsGenerator : MonoBehaviour {
 				//update node list for the grid
 				sg.nodes.Add(n);
 
-				//hash position to the object
-				pos_to_obj[pos]=grid;
 			}
 		return sg;
 	}
@@ -107,6 +107,7 @@ public class GridsGenerator : MonoBehaviour {
 		return new Vector3(_x,_y,0);
 	}
 
+	//this is bullshit,just for beauty
 	Color get_color(SquareGrid.grid_stat state){
 		switch(state){
 		case SquareGrid.grid_stat.empty:
