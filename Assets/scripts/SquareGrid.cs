@@ -12,6 +12,7 @@ public class SquareGrid  {
 	 * consider using extra structure in grid_node
 	 * for computing MDP.
 	 * ===============================*/
+
 	public int Width,Height;
 	public List<grid_node> nodes;
 	public enum grid_stat{obstacle,empty,teleporter,exit};
@@ -24,10 +25,9 @@ public class SquareGrid  {
 		{ 1,  grid_stat.teleporter},
 		{ 9,  grid_stat.exit}
 	};
+		
 
-	private grid_node invalid_grid=new grid_node(new V2Int(-1,-1));
-
-	private orientation[] Four_dir=new orientation[4]
+	public static orientation[] Four_dir=new orientation[4]
 								{orientation.up,
 								orientation.down,
 								orientation.left,
