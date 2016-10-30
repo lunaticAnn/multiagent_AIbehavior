@@ -65,7 +65,7 @@ public class SquareGrid  {
 		V2Int nb_pos=n.grid_position+(V2Int)orient[o];
 		grid_node nb=nodes.Find(such_node=>such_node.grid_position==nb_pos);
 		if (nb!=null)
-		if(walkable(nb)&&(!nb.occupied))return nb;
+		if (walkable(nb))return nb;
 
 		return null;
 	}

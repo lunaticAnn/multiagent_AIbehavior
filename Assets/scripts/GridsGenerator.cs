@@ -6,8 +6,7 @@ public class GridsGenerator : MonoBehaviour {
 	public static GridsGenerator instance=null;
 
 	const float grid_size=1f;
-
-	public Vector3 start_pos;
+	static Vector3 start_pos=Vector3.zero;
 
 	public GameObject grid_prefab;
 	public GameObject player_prefab;
@@ -15,8 +14,7 @@ public class GridsGenerator : MonoBehaviour {
 	public GameObject evador_prefab;
 
 	public GameObject player_instance;
-	public GameObject[] robot_instance;
-	public GameObject[] evador_instance;
+
 
 	//=================editor convenience======================
 	public Vector2 player_position;
@@ -71,16 +69,12 @@ public class GridsGenerator : MonoBehaviour {
 		foreach(Vector2 rp in robot_position){
 		GameObject robot_single=Instantiate(robot_prefab);
 		robot_single.SendMessage("init_self",convertor(rp));}
-		//record all ai robots
-		robot_instance=GameObject.FindGameObjectsWithTag("robot");
 
 		foreach(Vector2 vp in evador_position){
 			GameObject evador_single=Instantiate(evador_prefab);
 			evador_single.SendMessage("init_self",convertor(vp));
 		}
-
-		//record all the evadors for future access
-		evador_instance=GameObject.FindGameObjectsWithTag("evador");
+			
 
 		StageController.instance.Stage_switch();
 	}

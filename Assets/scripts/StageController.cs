@@ -13,8 +13,12 @@ public class StageController : MonoBehaviour {
 	public enum stage{Player_moving, Robot_moving, Evador_moving, Hang};
 	//A back up hang for dealing with situations
 	public stage current_stage;
+	public int score_evador;
+
+
 	public static StageController instance=null;
 
+	private bool stage_processed;
 	private static Hashtable next=new Hashtable()
 	{{stage.Player_moving,stage.Robot_moving},
 	 {stage.Robot_moving,stage.Evador_moving},
@@ -24,6 +28,7 @@ public class StageController : MonoBehaviour {
 		if(instance==null)instance=this;
 		else Destroy(gameObject);
 		current_stage=stage.Hang;
+		score_evador=0;
 	}
 
 
@@ -33,6 +38,7 @@ public class StageController : MonoBehaviour {
 			return;
 		}
 		current_stage=(stage)next[current_stage];
+		stage_processed=false;
 	}
 
 	void Update(){
@@ -48,23 +54,37 @@ public class StageController : MonoBehaviour {
 			return;
 
 		case stage.Robot_moving:
+			
 			//this will be controlled all together
 			//so I will change this one to a robot-controller.
-			foreach(GameObject rb in GridsGenerator.instance.robot_instance)
-			rb.SendMessage("random_move");
-			StageController.instance.Stage_switch();
+			if(!stage_processed){
+				stage_processed=true;
+				GameObject[] robot_instance=GameObject.FindGameObjectsWithTag("robot");
+				foreach(GameObject rb in robot_instance)
+				rb.SendMessage("random_move");
+				StartCoroutine("stage_yield");}
 			return;
 
 		case stage.Evador_moving:
 			
 			//Add more protection method for time-consumption for computing
-			foreach(GameObject ev in GridsGenerator.instance.evador_instance)
-				ev.SendMessage("random_move");
-			StageController.instance.Stage_switch();
+			if(!stage_processed){
+				stage_processed=true;
+				GameObject[] evador_instance=GameObject.FindGameObjectsWithTag("evador");
+				foreach(GameObject ev in evador_instance)
+					ev.SendMessage("random_move");
+				StartCoroutine("stage_yield");
+				}
 			return;
 		default:
 			return;
 		}
+	}
 
+
+
+	IEnumerator stage_yield(){
+		yield return new WaitForSeconds(0.1f);
+		StageController.instance.Stage_switch();
 	}
 }

@@ -3,9 +3,7 @@ using System.Collections;
 
 public class evador_behave : moving {
 	SquareGrid sg;
-
-	// Use this for initialization
-
+	public GameObject explosion;
 
 	void init_self (V2Int evador_pos) {
 		sg=GridsGenerator.instance.g;
@@ -14,12 +12,50 @@ public class evador_behave : moving {
 		move_to_grid(sg,current_node);
 
 	}
-	
-	// Update is called once per frame
+
+
+	bool cornered(){
+		/*=========================================================
+		 * 1st: all neighbours are occupied;
+		 * 2nd: they are occupied either by a player or a robot;
+		=========================================================*/
+		foreach(grid_node n in sg.my_neighbours(current_node)){
+			if(n.occupied==false) return false;
+			else if(n.gameObject.transform.GetChild(0).tag=="evador")
+	     		return false;
+		}return true;
+	}
+
 	void move(SquareGrid.orientation o) {
+		
+		//before move: chech whether go die
+		if(cornered()){
+			current_node.occupied=false;
+			explode(Color.red);
+			DestroyImmediate(gameObject);
+		}
+
 		grid_node target=sg.get_neighbour(current_node,o);
 		move_to_grid(sg,target);
+
+		if(target!=null){
+			if(target.state==SquareGrid.grid_stat.exit){
+				StageController.instance.score_evador+=1;
+				//remove self from board
+				current_node.occupied=false;
+				explode(Color.green);
+				DestroyImmediate(gameObject);}
+		}
 	}
+
+
+	void explode(Color c){
+		GameObject exp=Instantiate(explosion);
+		exp.transform.position=transform.position;
+		exp.GetComponent<ParticleSystem>().startColor=c;
+		Destroy(exp,1f);
+	}
+
 
 	//shuffle a direction,move
 	void random_move(){
