@@ -17,7 +17,6 @@ public class Robot_behave : moving {
 	}
 		
 	void move(SquareGrid.orientation o) {
-		StageController.instance.Stage_switch();
 		grid_node target=sg.get_neighbour(current_node,o);
 		move_to_grid(sg,target);
 	}
@@ -27,4 +26,14 @@ public class Robot_behave : moving {
 		int i=Random.Range(0,4);
 		move(SquareGrid.Four_dir[i]);
 	}
+
+
+	/*===========================Ideas of MDP=========================
+	 * init all values for grids(setvalue according to who is on the grid)
+	 *forall squaregrid n in squaregrid.my_neighbours(gridnodes):
+	 *gridnode.current_value=augmax(n.current_value[])
+	 *
+	 *delta_u=(max(current_value[]-last_value[]))[all gridnodes]
+	 *if delta_u<thread, return the neighbours of me(or action of me).
+	 ==============================================================*/
 }

@@ -17,7 +17,6 @@ public class evador_behave : moving {
 	
 	// Update is called once per frame
 	void move(SquareGrid.orientation o) {
-		StageController.instance.Stage_switch();
 		grid_node target=sg.get_neighbour(current_node,o);
 		move_to_grid(sg,target);
 	}

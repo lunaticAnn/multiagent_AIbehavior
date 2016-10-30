@@ -15,13 +15,13 @@ public class GridsGenerator : MonoBehaviour {
 	public GameObject evador_prefab;
 
 	public GameObject player_instance;
-	public GameObject robot_instance;
-	public GameObject evador_instance;
+	public GameObject[] robot_instance;
+	public GameObject[] evador_instance;
 
 	//=================editor convenience======================
 	public Vector2 player_position;
-	public Vector2 evador_position;
-	public Vector2 robot_position;
+	public Vector2[] evador_position;
+	public Vector2[] robot_position;
 	//================initial positions of all elements
 
 	public SquareGrid g;
@@ -68,11 +68,19 @@ public class GridsGenerator : MonoBehaviour {
 		player_instance=Instantiate(player_prefab);
 		player_instance.SendMessage("Init",convertor(player_position));
 
-		robot_instance=Instantiate(robot_prefab);
-		robot_instance.SendMessage("init_self",convertor(robot_position));
+		foreach(Vector2 rp in robot_position){
+		GameObject robot_single=Instantiate(robot_prefab);
+		robot_single.SendMessage("init_self",convertor(rp));}
+		//record all ai robots
+		robot_instance=GameObject.FindGameObjectsWithTag("robot");
 
-		evador_instance=Instantiate(evador_prefab);
-		evador_instance.SendMessage("init_self",convertor(evador_position));
+		foreach(Vector2 vp in evador_position){
+			GameObject evador_single=Instantiate(evador_prefab);
+			evador_single.SendMessage("init_self",convertor(vp));
+		}
+
+		//record all the evadors for future access
+		evador_instance=GameObject.FindGameObjectsWithTag("evador");
 
 		StageController.instance.Stage_switch();
 	}

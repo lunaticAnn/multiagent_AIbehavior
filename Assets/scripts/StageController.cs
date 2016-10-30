@@ -46,11 +46,21 @@ public class StageController : MonoBehaviour {
 		case stage.Player_moving:
 			GridsGenerator.instance.player_instance.SendMessage("move");
 			return;
+
 		case stage.Robot_moving:
-			GridsGenerator.instance.robot_instance.SendMessage("random_move");
+			//this will be controlled all together
+			//so I will change this one to a robot-controller.
+			foreach(GameObject rb in GridsGenerator.instance.robot_instance)
+			rb.SendMessage("random_move");
+			StageController.instance.Stage_switch();
 			return;
+
 		case stage.Evador_moving:
-			GridsGenerator.instance.evador_instance.SendMessage("random_move");
+			
+			//Add more protection method for time-consumption for computing
+			foreach(GameObject ev in GridsGenerator.instance.evador_instance)
+				ev.SendMessage("random_move");
+			StageController.instance.Stage_switch();
 			return;
 		default:
 			return;
