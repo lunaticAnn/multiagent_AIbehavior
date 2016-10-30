@@ -36,14 +36,18 @@ public class StageController : MonoBehaviour {
 	}
 
 	void Update(){
+
+		//manually update the stages.
 		if(Input.GetKeyDown(KeyCode.Space)){
 			Stage_switch();
 		}
+
 		switch(current_stage){
 		case stage.Player_moving:
 			GridsGenerator.instance.player_instance.SendMessage("move");
 			return;
 		case stage.Robot_moving:
+			GridsGenerator.instance.robot_instance.SendMessage("random_move");
 			return;
 		case stage.Evador_moving:
 			GridsGenerator.instance.evador_instance.SendMessage("random_move");

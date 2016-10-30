@@ -11,17 +11,22 @@ public class GridsGenerator : MonoBehaviour {
 
 	public GameObject grid_prefab;
 	public GameObject player_prefab;
+	public GameObject robot_prefab;
 	public GameObject evador_prefab;
+
 	public GameObject player_instance;
+	public GameObject robot_instance;
 	public GameObject evador_instance;
 
 	//=================editor convenience======================
 	public Vector2 player_position;
 	public Vector2 evador_position;
+	public Vector2 robot_position;
+	//================initial positions of all elements
 
 	public SquareGrid g;
 
-	private int[,] test=new int[4,5]{{0,0,0,0,0},{9,1,-1,0,0},{-1,0,0,1,0},{0,0,0,0,0}};	 
+	private int[,] test=new int[4,5]{{0,0,0,0,0},{9,1,-1,0,0},{0,0,0,1,0},{0,0,0,0,0}};	 
 
 
 
@@ -62,8 +67,13 @@ public class GridsGenerator : MonoBehaviour {
 		//===================set camera position======================
 		player_instance=Instantiate(player_prefab);
 		player_instance.SendMessage("Init",convertor(player_position));
+
+		robot_instance=Instantiate(robot_prefab);
+		robot_instance.SendMessage("init_self",convertor(robot_position));
+
 		evador_instance=Instantiate(evador_prefab);
 		evador_instance.SendMessage("init_self",convertor(evador_position));
+
 		StageController.instance.Stage_switch();
 	}
 
@@ -137,7 +147,10 @@ public class GridsGenerator : MonoBehaviour {
 		return new Vector3(_x,_y,0);
 	}
 
+
 	//this is bullshit,just for beauty
+	//consider change it to different sprites for initialization 
+
 	Color get_color(SquareGrid.grid_stat state){
 		switch(state){
 		case SquareGrid.grid_stat.empty:

@@ -1,21 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class evador_behave : moving {
+public class Robot_behave : moving {
+
+	//right now the robot behaves same as evador 
+	//as they are all moving randomly.
+
 	SquareGrid sg;
 
-	// Use this for initialization
-
-
-	void init_self (V2Int evador_pos) {
+	void init_self (V2Int robot_pos) {
 		sg=GridsGenerator.instance.g;
-		current_node=sg.nodes.Find(n=>n.grid_position==evador_pos);
+		current_node=sg.nodes.Find(n=>n.grid_position==robot_pos);
 		if(current_node.occupied){Debug.LogWarning("Someone else is there.");}
 		move_to_grid(sg,current_node);
 
 	}
-	
-	// Update is called once per frame
+		
 	void move(SquareGrid.orientation o) {
 		StageController.instance.Stage_switch();
 		grid_node target=sg.get_neighbour(current_node,o);
