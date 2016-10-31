@@ -6,6 +6,8 @@ public class GridsGenerator : MonoBehaviour {
 	public static GridsGenerator instance=null;
 
 	const float grid_size=1f;
+
+
 	static Vector3 start_pos=Vector3.zero;
 
 	public GameObject grid_prefab;
@@ -24,7 +26,7 @@ public class GridsGenerator : MonoBehaviour {
 
 	public SquareGrid g;
 
-	private int[,] test=new int[4,5]{{0,0,0,0,0},{9,1,-1,0,0},{0,0,0,1,0},{0,0,0,0,0}};	 
+	private int[,] test=new int[4,5]{{0,0,0,0,0},{9,1,-1,0,0},{0,0,0,1,0},{0,0,0,0,0}};
 
 
 
@@ -42,10 +44,84 @@ public class GridsGenerator : MonoBehaviour {
 	 * Envador_pos V2Int[nums]
 	 * =================================================
 	*/
+
+
+	/*++++++++++++++++++++++++++++++++++++++++Reward Function++++++++++++++++++++++++++++++++++++++++++++++
+	Call reward function as GridsGenerator.instance.get_grids(
+		 V2Int current_pos:this is the position of object who is requiring MDP,
+		 bool evador: true if it is evador, false if it is not.
+	)
+	I am still consfused about the reward function because it will be different
+	if you CAN /CAN NOT stay at the same grid with someone else.
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+	const float r_exit_evador=100f;
+	const float r_pursuer_evador=-110f;
+	const float unmovable=-100f;
+	const float r_next_to_evador=100f;
+
+	public float[,] get_grids(V2Int current_pos,bool evador){
+		//this will return the parsed grids from current game:
+		//evador(true) will return the evadors rewards grid
+		//evador(false) will return the rewards of pursuer
+		float[,] Rg=new float[test.GetLength(0),test.GetLength(1)];
+		//==================================Evador================================
+		if(evador){
+			//evador will update grid with exit and obstacles first;
+			for(int i=0;i<test.GetLength(0);i++)
+				for(int j=0;j<test.GetLength(1);j++){
+					if(test[i,j]==9){Rg[i,j]=r_exit_evador;}
+					else if(test[i,j]==-1){Rg[i,j]=unmovable;}
+					else Rg[i,j]=0;
+				    }
+			
+			foreach(grid_node n in g.nodes){
+				if(n.occupied){
+					//there is some one on the grid!
+					V2Int pos=n.grid_position;
+					if(current_pos==pos) continue;
+					//if it is evador,just like obstacle
+					if(n.gameObject.transform.GetChild(0).tag=="evador")
+						Rg[pos._y,pos._x]=unmovable;
+					else
+						Rg[pos._y,pos._x]=r_pursuer_evador;
+				}
+			}//end foreach
+			return Rg;
+		}//end evador
+
+		//===================================Pursuer=================================
+		for(int i=0;i<test.GetLength(0);i++)
+			for(int j=0;j<test.GetLength(1);j++){
+			 if(test[i,j]==-1){Rg[i,j]=unmovable;}
+				else Rg[i,j]=0;
+			}//update obstacles
+		foreach(grid_node n in g.nodes){
+			if(n.occupied){
+				//we want to figure out where the evadors are;
+					V2Int pos=n.grid_position;
+					if(current_pos==pos) continue;
+					if(n.gameObject.transform.GetChild(0).tag=="evador")
+						Rg[pos._y,pos._x]=r_next_to_evador;
+				}
+				
+			}
+		return Rg;
+	}
+
+	void print_reward(float[,] grid){
+		for(int i=0;i<grid.GetLength(0);i++){
+			string s="";				
+			for(int j=0;j<grid.GetLength(1);j++){
+				s+=grid[i,j]+" ";
+			} 
+			Debug.Log(s);
+		}
+	}
+	//++++++++++++++++++++++++++++++++++++++++Reward Function++++++++++++++++++++++++++++++++++++++++++++++
+
 	V2Int convertor(Vector2 src){
 		return new V2Int(Mathf.RoundToInt(src.x),Mathf.RoundToInt(src.y)); 
 	}
-
 
 
 	void Awake () {
@@ -77,6 +153,7 @@ public class GridsGenerator : MonoBehaviour {
 			
 
 		StageController.instance.Stage_switch();
+		print_reward(get_grids(new V2Int(0,0),false));
 	}
 
 	//This is also bullshit. 
