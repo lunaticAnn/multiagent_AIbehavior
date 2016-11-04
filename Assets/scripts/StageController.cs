@@ -61,7 +61,7 @@ public class StageController : MonoBehaviour {
 				stage_processed=true;
 				GameObject[] robot_instance=GameObject.FindGameObjectsWithTag("robot");
 				foreach(GameObject rb in robot_instance)
-				rb.SendMessage("random_move");
+				rb.SendMessage("guess_and_move");
 				StartCoroutine("stage_yield");}
 			return;
 
@@ -72,7 +72,7 @@ public class StageController : MonoBehaviour {
 				stage_processed=true;
 				GameObject[] evador_instance=GameObject.FindGameObjectsWithTag("evador");
 				foreach(GameObject ev in evador_instance)
-					ev.SendMessage("random_move");
+					ev.SendMessage("IQ1_move");
 				StartCoroutine("stage_yield");
 				}
 			return;

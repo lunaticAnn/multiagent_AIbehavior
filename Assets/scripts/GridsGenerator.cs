@@ -83,12 +83,12 @@ public class GridsGenerator : MonoBehaviour {
 					if(n.gameObject.transform.GetChild(0).tag=="evador")
 						Rg[pos._y,pos._x]=unmovable;
 					else
-						Rg[pos._y,pos._x]=r_pursuer_evador;
+						Rg[pos._y,pos._x]+=r_pursuer_evador;
 				}
 			}//end foreach
 			return Rg;
 		}//end evador
-
+			
 		//===================================Pursuer=================================
 		for(int i=0;i<test.GetLength(0);i++)
 			for(int j=0;j<test.GetLength(1);j++){
@@ -118,6 +118,9 @@ public class GridsGenerator : MonoBehaviour {
 		}
 	}
 	//++++++++++++++++++++++++++++++++++++++++Reward Function++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
 
 	V2Int convertor(Vector2 src){
 		return new V2Int(Mathf.RoundToInt(src.x),Mathf.RoundToInt(src.y)); 
@@ -153,7 +156,7 @@ public class GridsGenerator : MonoBehaviour {
 			
 
 		StageController.instance.Stage_switch();
-		print_reward(get_grids(new V2Int(0,0),false));
+	
 	}
 
 	//This is also bullshit. 
@@ -206,9 +209,10 @@ public class GridsGenerator : MonoBehaviour {
 				grid_node n=grid.GetComponent<grid_node>();
 				n.grid_position=pos;
 				n.state=(SquareGrid.grid_stat)SquareGrid.int_to_stat[int_grid[coord_y,coord_x]];
-
+				n.set_color(get_color(n.state));
 				//set color
 				grid.GetComponent<SpriteRenderer>().color=get_color(n.state);
+
 
 				//update node list for the grid
 				sg.nodes.Add(n);
