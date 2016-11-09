@@ -31,8 +31,10 @@ public class Robot_behave : moving {
 
 	const int time_to_decide=3;
 	List<evador_behave> player_target=new List<evador_behave>();
-	Hashtable previous_step=new Hashtable();
-	Hashtable current_step=new Hashtable();
+	Dictionary<evador_behave,int> previous_step=new Dictionary<evador_behave,int>();
+	Dictionary<evador_behave,int> current_step=new Dictionary<evador_behave,int>();
+	Dictionary<evador_behave,int> rf_factor=new Dictionary<evador_behave,int>();
+
 
 
 	void guess_and_move(){
@@ -67,13 +69,14 @@ public class Robot_behave : moving {
 			player_target.Add(eb);		
 			previous_step[eb]=0;
 			current_step[eb]=0;
+			rf_factor[eb]=1;
 		}
 	}
 
 	void refresh_target_list(){
 		V2Int player_pos=GameObject.FindGameObjectWithTag("Player").GetComponent<moving>().current_node.grid_position;
 		foreach(evador_behave _e in player_target){
-			previous_step[_e]=(int)current_step[_e];
+			previous_step[_e]=current_step[_e];
 			current_step[_e]=Manhattan(player_pos,_e.current_node.grid_position);
 		}
 	}
@@ -81,12 +84,16 @@ public class Robot_behave : moving {
 	evador_behave Find_target(List<evador_behave> t){
 		int min_reward=0;
 		int reward;
+
 		evador_behave target_now=null;
 		foreach(evador_behave eb in t){
 			reward=0;
-			if((int)previous_step[eb]>=(int)current_step[eb]){
-				reward=-10;
+			if((int)previous_step[eb]>=current_step[eb]){
+				reward=-30*rf_factor[eb];
+				rf_factor[eb]+=1;
+
 			}
+			else{rf_factor[eb]=1;}//clear target threat;
 			reward+=Manhattan(current_node.grid_position,eb.current_node.grid_position);
 			if(target_now==null){
 				target_now=eb;

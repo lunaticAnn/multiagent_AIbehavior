@@ -30,6 +30,25 @@ public class evador_behave : moving {
 		}return true;
 	}
 
+	//================================Visial Elements=====================================
+	void explode(Color c){
+		GameObject exp=Instantiate(explosion);
+		exp.transform.position=transform.position;
+		exp.GetComponent<ParticleSystem>().startColor=c;
+		Destroy(exp,1f);
+	}
+
+	void flash_me(){
+		gameObject.GetComponent<SpriteRenderer>().color=Color.cyan;
+		Invoke("norm_me",1f);
+	}
+	void norm_me(){
+		gameObject.GetComponent<SpriteRenderer>().color=Color.red;
+	}
+	//================================Visial Elements=====================================
+
+
+	//===============================Random move=====================================
 	void move(SquareGrid.orientation o) {
 		
 		//before move: chech whether go die
@@ -51,22 +70,16 @@ public class evador_behave : moving {
 				DestroyImmediate(gameObject);}
 		}
 	}
-
-
-	void explode(Color c){
-		GameObject exp=Instantiate(explosion);
-		exp.transform.position=transform.position;
-		exp.GetComponent<ParticleSystem>().startColor=c;
-		Destroy(exp,1f);
-	}
-
+		
 
 	//shuffle a direction,move
 	void random_move(){
 		int i=Random.Range(0,4);
 		move(SquareGrid.Four_dir[i]);
 	}
+	//===============================Random move=====================================
 
+	//===============================Simple Greedy Move=========================
 
 	void IQ1_move(){
 		/*this relatively clever movement is examine the whole grid 
@@ -133,15 +146,10 @@ public class evador_behave : moving {
 	int Manhattan(V2Int posA,V2Int posB){
 		return Mathf.Abs(posA._x-posB._x)+Mathf.Abs(posA._y-posB._y);
 	}
+	//===============================Simple Greedy Move=========================
 
 
-	void flash_me(){
-		gameObject.GetComponent<SpriteRenderer>().color=Color.cyan;
-		Invoke("norm_me",1f);
-	}
-	void norm_me(){
-		gameObject.GetComponent<SpriteRenderer>().color=Color.red;
-	}
+
 
 
 }
