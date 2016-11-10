@@ -44,4 +44,11 @@ public class grid_node: MonoBehaviour{
 	}
 	//===============================visual Elements==============================
 			
+	public override string ToString(){
+//		return "Grid_node grid_position=" + grid_position.ToString ()
+//		+ "; state=" + state + "; current_value=" + current_value
+//		+ "; last_value=" + last_value + "; origin_color="
+//		+ origin_color + "; occupied=" + occupied;
+		return this.grid_position.ToString ();
+	}
 }

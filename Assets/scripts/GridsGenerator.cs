@@ -153,10 +153,14 @@ public class GridsGenerator : MonoBehaviour {
 			GameObject evador_single=Instantiate(evador_prefab);
 			evador_single.SendMessage("init_self",convertor(vp));
 		}
-			
+
+		// Initiate the robot pursuers' shared MDP
+//		This happens after StateController's Start()
+//		Debug.LogWarning("MDP2nd "+Robot_MDP.instance.get_a());
+		// update the pos of each agent
+		RobotsMDP.instance.UpdateAgentsPos ();
 
 		StageController.instance.Stage_switch();
-	
 	}
 
 	//This is also bullshit. 

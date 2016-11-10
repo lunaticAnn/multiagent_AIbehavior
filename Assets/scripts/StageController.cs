@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class StageController : MonoBehaviour {
 	/*================================================================
@@ -14,15 +15,13 @@ public class StageController : MonoBehaviour {
 	//A back up hang for dealing with situations
 	public stage current_stage;
 	public int score_evador;
-
-
 	public static StageController instance=null;
-
 	private bool stage_processed;
 	private static Hashtable next=new Hashtable()
 	{{stage.Player_moving,stage.Robot_moving},
 	 {stage.Robot_moving,stage.Evador_moving},
 	 {stage.Evador_moving,stage.Player_moving}};
+
 
 	void Awake () {
 		if(instance==null)instance=this;
@@ -30,6 +29,12 @@ public class StageController : MonoBehaviour {
 		current_stage=stage.Hang;
 		score_evador=0;
 	}
+
+//	This happens before GridsGenerator
+//	void Start() {
+//		Robot_MDP.instance.set_a(211);
+//		Debug.LogWarning("MDP1nd "+Robot_MDP.instance.get_a());
+//	}
 
 
 	public void Stage_switch () {
@@ -59,9 +64,14 @@ public class StageController : MonoBehaviour {
 			//so I will change this one to a robot-controller.
 			if(!stage_processed){
 				stage_processed=true;
+
+				// update the pos of each agent
+				RobotsMDP.instance.UpdateAgentsPos();
+				List<int> opt_actions = RobotsMDP.instance.ComputeOptActions();
 				GameObject[] robot_instance=GameObject.FindGameObjectsWithTag("robot");
-				foreach(GameObject rb in robot_instance)
-				rb.SendMessage("guess_and_move");
+				for (int i = 0; i < robot_instance.Length; i++) {
+					robot_instance[i].SendMessage("mdp_move", opt_actions[i]);
+				}
 				StartCoroutine("stage_yield");}
 			return;
 

@@ -34,7 +34,7 @@ public class SquareGrid  {
 								orientation.right};
 	
 	//vector representative of orientations
-	private Hashtable orient = new Hashtable()
+	public static Hashtable orient = new Hashtable()
 	{
 		{ orientation.up, new V2Int(0,1)},
 		{ orientation.down, new V2Int(0,-1)},
