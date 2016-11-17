@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextSumProblemSample", "TextSumProblemSample\TextSumProblemSample.csproj", "{DA811763-8715-47D0-9EDB-5DBF3B9A581E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA811763-8715-47D0-9EDB-5DBF3B9A581E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA811763-8715-47D0-9EDB-5DBF3B9A581E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA811763-8715-47D0-9EDB-5DBF3B9A581E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA811763-8715-47D0-9EDB-5DBF3B9A581E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

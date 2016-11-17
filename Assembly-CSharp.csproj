@@ -45,8 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\Combinatorics\Combinations.cs" />
+     <Compile Include="Assets\scripts\Combinatorics\GenerateOption.cs" />
+     <Compile Include="Assets\scripts\Combinatorics\IMetaCollection.cs" />
+     <Compile Include="Assets\scripts\Combinatorics\Permutations.cs" />
+     <Compile Include="Assets\scripts\Combinatorics\SmallPrimeUtility.cs" />
+     <Compile Include="Assets\scripts\Combinatorics\Variations.cs" />
      <Compile Include="Assets\scripts\GridsGenerator.cs" />
      <Compile Include="Assets\scripts\Heap.cs" />
+     <Compile Include="Assets\scripts\PermuteUtils.cs" />
      <Compile Include="Assets\scripts\RobotsBehave.cs" />
      <Compile Include="Assets\scripts\RobotsBehaveMDP.cs" />
      <Compile Include="Assets\scripts\RobotsMDP.cs" />

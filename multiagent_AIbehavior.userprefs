@@ -1,13 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/Robot_MDP.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/RobotsMDPState.cs">
     <Files>
-      <File FileName="Assets/scripts/Robot_behave_MDP.cs" Line="17" Column="18" />
-      <File FileName="Assets/scripts/StageController.cs" Line="58" Column="4" />
-      <File FileName="Assets/scripts/Robot_MDP.cs" Line="38" Column="5" />
-      <File FileName="Assets/scripts/GridsGenerator.cs" Line="162" Column="42" />
-      <File FileName="Assets/scripts/evador_behave.cs" Line="87" Column="55" />
-      <File FileName="Assets/scripts/Robot_behave.cs" Line="92" Column="23" />
+      <File FileName="Assets/scripts/RobotsMDPState.cs" Line="59" Column="31" />
+      <File FileName="Assets/scripts/GridsGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/RobotsMDP.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/Combinatorics/Combinations.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

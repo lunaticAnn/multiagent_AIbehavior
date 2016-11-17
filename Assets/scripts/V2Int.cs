@@ -8,6 +8,12 @@ public class V2Int {
  	* ============================*/
 	public int _x;
 	public int _y;
+	private const int default_val = -1;
+
+	public V2Int(){
+		this._x = default_val;
+		this._y = default_val;
+	}
 
 	public V2Int(int x,int y){
 		this._x=x;
@@ -20,6 +26,11 @@ public class V2Int {
 		this._y=source._y;
 	}
 
+
+	public void Clear(){
+		this._x = default_val;
+		this._y = default_val;
+	}
 
 	public static V2Int operator +(V2Int lh,V2Int rh){
 		return new V2Int(lh._x+rh._x,lh._y+rh._y);

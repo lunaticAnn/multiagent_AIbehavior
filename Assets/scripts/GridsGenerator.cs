@@ -145,6 +145,15 @@ public class GridsGenerator : MonoBehaviour {
 		player_instance=Instantiate(player_prefab);
 		player_instance.SendMessage("Init",convertor(player_position));
 
+		//---------------------------------------
+		// Shen
+		List<Vector2> robot_position = new List<Vector2> ();
+		robot_position.Add(new Vector2 (1,0));
+		robot_position.Add(new Vector2 (0,1));
+		List<Vector2> evador_position = new List<Vector2> ();
+		evador_position.Add(new Vector2 (4,3));
+		//---------------------------------------
+
 		foreach(Vector2 rp in robot_position){
 		GameObject robot_single=Instantiate(robot_prefab);
 		robot_single.SendMessage("init_self",convertor(rp));}
@@ -157,9 +166,7 @@ public class GridsGenerator : MonoBehaviour {
 		// Initiate the robot pursuers' shared MDP
 //		This happens after StateController's Start()
 //		Debug.LogWarning("MDP2nd "+Robot_MDP.instance.get_a());
-		// update the pos of each agent
-		RobotsMDP.instance.UpdateAgentsPos ();
-
+		RobotsMDP.instance.InitEverything (test);
 		StageController.instance.Stage_switch();
 	}
 
