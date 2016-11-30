@@ -37,8 +37,8 @@ public class StageController : MonoBehaviour {
 			current_stage=stage.Player_moving;
 			return;
 		}
-		current_stage=(stage)next[current_stage];
-		stage_processed=false;
+		current_stage=(stage)next[current_stage]; //current stage is type stage?
+		stage_processed=false; //To control robot and evadors?
 	}
 
 	void Update(){
@@ -72,7 +72,7 @@ public class StageController : MonoBehaviour {
 				stage_processed=true;
 				GameObject[] evador_instance=GameObject.FindGameObjectsWithTag("evador");
 				foreach(GameObject ev in evador_instance)
-					ev.SendMessage("IQ1_move");
+					ev.SendMessage("IQ2_move");
 				StartCoroutine("stage_yield");
 				}
 			return;

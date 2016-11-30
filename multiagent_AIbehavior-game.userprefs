@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/StageController.cs">
+    <Files>
+      <File FileName="Assets/scripts/GridsGenerator.cs" Line="83" Column="1" />
+      <File FileName="Assets/scripts/grid_node.cs" Line="52" Column="2" />
+      <File FileName="Assets/scripts/Heap.cs" Line="106" Column="1" />
+      <File FileName="Assets/scripts/evador_behave.cs" Line="179" Column="26" />
+      <File FileName="Assets/scripts/StageController.cs" Line="75" Column="25" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

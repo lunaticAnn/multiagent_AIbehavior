@@ -98,8 +98,9 @@ public class Heap<T> where T:IHeapItem<T>{
 }
 
 public interface IHeapItem<T>:IComparable<T>{
-	int heap_index{
+	int heap_index{ //how to use this interface???
 		get;
 		set;
 	}
+		
 }

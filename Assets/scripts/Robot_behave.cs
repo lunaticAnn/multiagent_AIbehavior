@@ -128,10 +128,12 @@ public class Robot_behave : moving {
 
 
 }
-/*===========================Ideas of MDP=========================
-	 * init all values for grids(setvalue according to who is on the grid)
-	 *forall squaregrid n in squaregrid.my_neighbours(gridnodes):
-	 *gridnode.current_value=augmax(n.current_value[])
-	 *delta_u=(max(current_value[]-last_value[]))[all gridnodes]
-	 *if delta_u<thread, return the neighbours of me(or action of me).
-	 ==============================================================*/
+
+/*==========================Ideas of MDP_v2=======================
+     * For v2, the goal of the robots is to minimize the reward of the 
+     * evador who has the largest reward.Meanwhile, instead of using 
+     * player, we will design a robot using MDP with constant probabitlity.
+     * We call it as semi-human robot. 
+     * Therefore, another goal for the robot is to maximize the reward 
+	 * of the semi-human robot. (how to learn maximize other's reward?).
+     ================================================================*/

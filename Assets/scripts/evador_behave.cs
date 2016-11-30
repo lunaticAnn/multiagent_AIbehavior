@@ -146,10 +146,98 @@ public class evador_behave : moving {
 	int Manhattan(V2Int posA,V2Int posB){
 		return Mathf.Abs(posA._x-posB._x)+Mathf.Abs(posA._y-posB._y);
 	}
-	//===============================Simple Greedy Move=========================
 
+	//===============================A* Search=========================
 
+	void IQ2_move(){
+		grid_node candidate=null;
+		if(cornered()){
+			current_node.occupied=false;
+			explode(Color.red);
+			DestroyImmediate(gameObject);
+		}
 
+		/* set next move with A* pathfinding and avoid pursuers*/
+		candidate=evador_next(sg,current_node);	    
+		if(candidate.state==SquareGrid.grid_stat.exit){
+			StageController.instance.score_evador+=1;
+			//remove self from board
+			current_node.occupied=false;
+			explode(Color.green);
+			DestroyImmediate(gameObject);
+		}
+	}
 
+	grid_node astar(SquareGrid sg,grid_node startNode){
+		//* the Heuristic function that I am using is:
+		//* Manhattan(n.grid_pos,exit)
+		grid_node candidate=null;
+		grid_node targetNode = sg.nodes.Find(n=>n.state==SquareGrid.grid_stat.exit); //Is that right??
+		Heap<grid_node> openSet = new Heap<grid_node>(sg.Width*sg.Height); //Is that right??
+		//Heap<grid_node> openSet = new Heap<grid_node>(20);
+		//HashSet<grid_node> closedSet = new HashSet<grid_node>();
+		List<grid_node> closedSet = new List<grid_node>();
+		openSet.Add(startNode);
 
+		while(openSet.count > 0){
+			grid_node currentNode = openSet.remove_first();
+			closedSet.Add(currentNode);
+
+			if(currentNode == targetNode){
+				//RetracePath(startNode,targetNode);
+				candidate=closedSet[1]; //the next step??
+				break;
+			}
+
+			foreach(grid_node n in sg.my_neighbours(currentNode)){
+				if(!sg.walkable(n) || closedSet.Contains(n)|| n.occupied){
+					continue;
+				}
+
+				int newMovementCostToNeighbour=currentNode.gCost + Manhattan(currentNode.grid_position,n.grid_position);
+				if(newMovementCostToNeighbour<n.gCost || !openSet.Contains(n)){
+					n.gCost = newMovementCostToNeighbour; 
+					n.hCost = Manhattan(n.grid_position,targetNode.grid_position);
+					n.parent = currentNode;
+
+					if(!openSet.Contains(n)){
+						openSet.Add(n);
+					}
+				}
+			}
+
+		}
+		candidate=closedSet[1]; 
+		return candidate;
+
+	}
+
+	grid_node evador_next(SquareGrid sg,grid_node current_node){
+		grid_node candidate = astar(sg,current_node);
+		Debug.Log (candidate == null);
+		//if uninitialized, initialize
+		if(pursuers.Count==0){
+			GameObject[] robots=GameObject.FindGameObjectsWithTag("robot");
+			foreach (GameObject r in robots)
+				pursuers.Add(r);
+			pursuers.Add(GameObject.FindGameObjectWithTag("Player"));
+		}
+		//initialized, evaluate according to them
+		for(int i=0;i<pursuers.Count;i++){
+			foreach(grid_node n in sg.my_neighbours(pursuers[i].GetComponent<moving>().current_node)){
+				if(sg.walkable(n) && (!n.occupied)){
+					if (candidate.grid_position!=n.grid_position)
+						move_to_grid(sg,candidate);
+					else{
+						//If the possible next node of each pursuers overlaps the candidate,
+						//see the candidate node as an obstacle
+						candidate.occupied=true;//is that right??
+							//recursive call, it will move since there are only three pursuers
+							candidate = evador_next(sg,current_node); 
+						}			    
+					}
+			}
+		}
+		return candidate;
+	}
 }
