@@ -1,11 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/RobotsMDPState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/RobotsMDP.cs">
     <Files>
-      <File FileName="Assets/scripts/RobotsMDPState.cs" Line="59" Column="31" />
+      <File FileName="Assets/scripts/RobotsMDP.cs" Line="716" Column="36" />
+      <File FileName="Assets/scripts/SquareGrid.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/GridsGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/RobotsMDP.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/Combinatorics/Combinations.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

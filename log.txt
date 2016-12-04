@@ -1,0 +1,2988 @@
+ApproximateValueIteration
+*1. num of features weight = 41
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+*2.1 Sample a Regular state = 
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+*2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 1, 4, 2, 2, 2, 2, 1, 0, 1, 3, 9, 3, 4, 16, 4, 16, 2, 4, 32, 4, 4, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+best actions = right, 
+3.2 s_joint_action = <right, down, down, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..p..
+..o.r
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 1, 2, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 4, 16, 1, 1, 16, 4, 4, 1, 2, 4, 3, 9, 2, 4, 3, 9, 3, 9, 3, 9, 6, 6, 9, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 719
+s_utility_bellman_backed_up = 519
+3.2 s_joint_action = <right, down, down, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+.....
+..o.r
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 0, 4, 1, 2, 3, 2, 1, 0, 1, 3, 9, 3, 5, 25, 5, 25, 1, 1, 25, 5, 5, 1, 2, 4, 4, 16, 2, 4, 4, 16, 4, 16, 4, 16, 8, 8, 16, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 1007
+s_utility_bellman_backed_up = 807
+3.2 s_joint_action = <right, down, down, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p...
+..o.r
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 1, 1, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 4, 16, 2, 4, 32, 4, 4, 2, 2, 4, 4, 16, 2, 4, 4, 16, 4, 16, 4, 16, 8, 8, 16, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 1016
+s_utility_bellman_backed_up = 816
+3.2 s_joint_action = <right, down, down, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...p.
+..o.r
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 1, 3, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 4, 16, 2, 4, 32, 4, 4, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 690
+s_utility_bellman_backed_up = 490
+3.2 s_joint_action = <right, down, up, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+..p..
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 3, 2, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 1, 1, 8, 4, 2, 1, 4, 16, 3, 9, 4, 16, 3, 9, 3, 9, 3, 9, 12, 12, 9, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 793
+s_utility_bellman_backed_up = 593
+3.2 s_joint_action = <right, down, up, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp.r
+.....
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 0, 4, 3, 2, 3, 2, 1, 0, 1, 3, 9, 3, 5, 25, 3, 9, 1, 1, 15, 5, 3, 1, 4, 16, 4, 16, 4, 16, 2, 4, 4, 16, 2, 4, 16, 8, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 877
+s_utility_bellman_backed_up = 677
+3.2 s_joint_action = <right, down, up, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+.p...
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 3, 1, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 2, 4, 16, 4, 2, 2, 4, 16, 4, 16, 4, 16, 4, 16, 4, 16, 4, 16, 16, 16, 16, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 1066
+s_utility_bellman_backed_up = 866
+3.2 s_joint_action = <right, down, up, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+...p.
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 3, 3, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 2, 4, 16, 4, 2, 2, 4, 16, 2, 4, 4, 16, 2, 4, 2, 4, 2, 4, 8, 8, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 692
+s_utility_bellman_backed_up = 492
+3.2 s_joint_action = <right, down, left, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..pr.
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 3, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 1, 1, 8, 4, 2, 1, 2, 4, 3, 9, 2, 4, 1, 1, 3, 9, 1, 1, 6, 2, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 483
+s_utility_bellman_backed_up = 283
+3.2 s_joint_action = <right, down, left, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+...r.
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 0, 3, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 5, 25, 3, 9, 1, 1, 15, 5, 3, 1, 2, 4, 4, 16, 2, 4, 2, 4, 4, 16, 2, 4, 8, 4, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 699
+s_utility_bellman_backed_up = 499
+3.2 s_joint_action = <right, down, left, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p.r.
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 3, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 2, 4, 16, 4, 2, 2, 2, 4, 4, 16, 2, 4, 2, 4, 4, 16, 2, 4, 8, 4, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 688
+s_utility_bellman_backed_up = 488
+3.2 s_joint_action = <right, down, left, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 2, 4, 24, 4, 3, 2, 3, 9, 2, 4, 3, 9, 1, 1, 2, 4, 1, 1, 6, 3, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 621
+s_utility_bellman_backed_up = 421
+3.2 s_joint_action = <right, down, right, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..p.r
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 1, 1, 12, 4, 3, 1, 3, 9, 3, 9, 3, 9, 2, 4, 3, 9, 2, 4, 9, 6, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 664
+s_utility_bellman_backed_up = 464
+3.2 s_joint_action = <right, down, right, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+....r
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 0, 4, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 5, 25, 4, 16, 1, 1, 20, 5, 4, 1, 3, 9, 4, 16, 3, 9, 3, 9, 4, 16, 3, 9, 12, 9, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 928
+s_utility_bellman_backed_up = 728
+3.2 s_joint_action = <right, down, right, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p..r
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 2, 4, 24, 4, 3, 2, 3, 9, 4, 16, 3, 9, 3, 9, 4, 16, 3, 9, 12, 9, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 927
+s_utility_bellman_backed_up = 727
+3.2 s_joint_action = <right, down, right, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 0, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 2, 4, 24, 4, 3, 2, 3, 9, 2, 4, 3, 9, 1, 1, 2, 4, 1, 1, 6, 3, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 621
+s_utility_bellman_backed_up = 421
+3.2 s_joint_action = <right, up, down, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..pr.
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 2, 4, 1, 2, 2, 2, 1, 0, 1, 4, 16, 4, 2, 4, 4, 16, 1, 1, 8, 2, 4, 1, 2, 4, 1, 1, 2, 4, 3, 9, 1, 1, 3, 9, 2, 6, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 485
+s_utility_bellman_backed_up = 285
+3.2 s_joint_action = <right, up, down, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+...r.
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 2, 4, 1, 2, 3, 2, 1, 0, 1, 3, 9, 3, 3, 9, 5, 25, 1, 1, 15, 3, 5, 1, 2, 4, 2, 4, 2, 4, 4, 16, 2, 4, 4, 16, 4, 8, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 701
+s_utility_bellman_backed_up = 501
+3.2 s_joint_action = <right, up, down, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p.r.
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 2, 4, 1, 1, 2, 2, 1, 0, 1, 4, 16, 4, 2, 4, 4, 16, 2, 4, 16, 2, 4, 2, 2, 4, 2, 4, 2, 4, 4, 16, 2, 4, 4, 16, 4, 8, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 690
+s_utility_bellman_backed_up = 490
+3.2 s_joint_action = <right, up, down, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...p.
+..orr
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 1, 3, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 4, 16, 2, 4, 24, 3, 4, 2, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 513
+s_utility_bellman_backed_up = 313
+3.2 s_joint_action = <right, up, up, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+..pr.
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 2, 4, 3, 2, 2, 2, 1, 0, 1, 4, 16, 4, 2, 4, 2, 4, 1, 1, 4, 2, 2, 1, 2, 4, 1, 1, 2, 4, 3, 9, 1, 1, 3, 9, 2, 6, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 407
+s_utility_bellman_backed_up = 207
+3.2 s_joint_action = <right, up, up, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp.r
+...r.
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 2, 4, 3, 2, 3, 2, 1, 0, 1, 3, 9, 3, 3, 9, 3, 9, 1, 1, 9, 3, 3, 1, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 443
+s_utility_bellman_backed_up = 243
+3.2 s_joint_action = <right, up, up, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+.p.r.
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 2, 4, 3, 1, 2, 2, 1, 0, 1, 4, 16, 4, 2, 4, 2, 4, 2, 4, 8, 2, 2, 2, 2, 4, 2, 4, 2, 4, 4, 16, 2, 4, 4, 16, 4, 8, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 588
+s_utility_bellman_backed_up = 388
+3.2 s_joint_action = <right, up, up, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+...p.
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 3, 3, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 2, 4, 2, 4, 12, 3, 2, 2, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 495
+s_utility_bellman_backed_up = 295
+3.2 s_joint_action = <right, up, left, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..prr
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 2, 4, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 2, 4, 3, 9, 1, 1, 6, 2, 3, 1, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 334
+s_utility_bellman_backed_up = 134
+3.2 s_joint_action = <right, up, left, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+...rr
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 2, 4, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 3, 9, 4, 16, 1, 1, 12, 3, 4, 1, 1, 1, 2, 4, 1, 1, 3, 9, 2, 4, 3, 9, 2, 3, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 502
+s_utility_bellman_backed_up = 302
+3.2 s_joint_action = <right, up, left, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p.rr
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 2, 4, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 2, 4, 3, 9, 2, 4, 12, 2, 3, 2, 1, 1, 2, 4, 1, 1, 3, 9, 2, 4, 3, 9, 2, 3, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 493
+s_utility_bellman_backed_up = 293
+3.2 s_joint_action = <right, up, left, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 3, 9, 2, 4, 18, 3, 3, 2, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 446
+s_utility_bellman_backed_up = 246
+3.2 s_joint_action = <right, up, right, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..prr
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 2, 4, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 2, 4, 3, 9, 1, 1, 6, 2, 3, 1, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 334
+s_utility_bellman_backed_up = 134
+3.2 s_joint_action = <right, up, right, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+...rr
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 2, 4, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 3, 9, 4, 16, 1, 1, 12, 3, 4, 1, 1, 1, 2, 4, 1, 1, 3, 9, 2, 4, 3, 9, 2, 3, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 502
+s_utility_bellman_backed_up = 302
+3.2 s_joint_action = <right, up, right, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p.rr
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 2, 4, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 2, 4, 3, 9, 2, 4, 12, 2, 3, 2, 1, 1, 2, 4, 1, 1, 3, 9, 2, 4, 3, 9, 2, 3, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 493
+s_utility_bellman_backed_up = 293
+3.2 s_joint_action = <right, up, right, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 3, 9, 2, 4, 18, 3, 3, 2, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 446
+s_utility_bellman_backed_up = 246
+3.2 s_joint_action = <right, left, down, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..p..
+..orr
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 1, 2, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 4, 16, 1, 1, 12, 3, 4, 1, 1, 1, 2, 4, 1, 1, 3, 9, 2, 4, 3, 9, 2, 3, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 532
+s_utility_bellman_backed_up = 332
+3.2 s_joint_action = <right, left, down, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+.....
+..orr
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 1, 4, 1, 2, 3, 2, 1, 0, 1, 3, 9, 3, 4, 16, 5, 25, 1, 1, 20, 4, 5, 1, 1, 1, 3, 9, 1, 1, 4, 16, 3, 9, 4, 16, 3, 4, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 772
+s_utility_bellman_backed_up = 572
+3.2 s_joint_action = <right, left, down, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p...
+..orr
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 1, 1, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 4, 16, 2, 4, 24, 3, 4, 2, 1, 1, 3, 9, 1, 1, 4, 16, 3, 9, 4, 16, 3, 4, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 771
+s_utility_bellman_backed_up = 571
+3.2 s_joint_action = <right, left, down, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...p.
+..orr
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 1, 3, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 4, 16, 2, 4, 24, 3, 4, 2, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 513
+s_utility_bellman_backed_up = 313
+3.2 s_joint_action = <right, left, up, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+..p..
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 3, 2, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 2, 4, 1, 1, 6, 3, 2, 1, 3, 9, 2, 4, 3, 9, 3, 9, 2, 4, 3, 9, 6, 9, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 574
+s_utility_bellman_backed_up = 374
+3.2 s_joint_action = <right, left, up, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp.r
+.....
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 1, 4, 3, 2, 3, 2, 1, 0, 1, 3, 9, 3, 4, 16, 3, 9, 1, 1, 12, 4, 3, 1, 3, 9, 3, 9, 3, 9, 2, 4, 3, 9, 2, 4, 9, 6, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 634
+s_utility_bellman_backed_up = 434
+3.2 s_joint_action = <right, left, up, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+.p...
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 3, 1, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 2, 4, 2, 4, 12, 3, 2, 2, 3, 9, 3, 9, 3, 9, 4, 16, 3, 9, 4, 16, 9, 12, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 801
+s_utility_bellman_backed_up = 601
+3.2 s_joint_action = <right, left, up, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+...p.
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 3, 3, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 2, 4, 2, 4, 12, 3, 2, 2, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 495
+s_utility_bellman_backed_up = 295
+3.2 s_joint_action = <right, left, left, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..pr.
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 3, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 2, 4, 1, 1, 6, 3, 2, 1, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 332
+s_utility_bellman_backed_up = 132
+3.2 s_joint_action = <right, left, left, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+...r.
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 1, 3, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 4, 16, 3, 9, 1, 1, 12, 4, 3, 1, 1, 1, 3, 9, 1, 1, 2, 4, 3, 9, 2, 4, 3, 2, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 500
+s_utility_bellman_backed_up = 300
+3.2 s_joint_action = <right, left, left, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p.r.
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 3, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 2, 4, 2, 4, 12, 3, 2, 2, 1, 1, 3, 9, 1, 1, 2, 4, 3, 9, 2, 4, 3, 2, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 491
+s_utility_bellman_backed_up = 291
+3.2 s_joint_action = <right, left, left, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 3, 9, 2, 4, 18, 3, 3, 2, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 446
+s_utility_bellman_backed_up = 246
+3.2 s_joint_action = <right, left, right, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..p.r
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 3, 9, 1, 1, 9, 3, 3, 1, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 473
+s_utility_bellman_backed_up = 273
+3.2 s_joint_action = <right, left, right, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+....r
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 3, 1, 4, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 4, 16, 4, 16, 1, 1, 16, 4, 4, 1, 2, 4, 3, 9, 2, 4, 3, 9, 3, 9, 3, 9, 6, 6, 9, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 689
+s_utility_bellman_backed_up = 489
+3.2 s_joint_action = <right, left, right, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p..r
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 3, 9, 2, 4, 18, 3, 3, 2, 2, 4, 3, 9, 2, 4, 3, 9, 3, 9, 3, 9, 6, 6, 9, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 684
+s_utility_bellman_backed_up = 484
+3.2 s_joint_action = <right, left, right, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..or.
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 3, 1, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 3, 9, 3, 9, 2, 4, 18, 3, 3, 2, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 446
+s_utility_bellman_backed_up = 246
+3.2 s_joint_action = <right, right, down, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..p.r
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 1, 1, 12, 4, 3, 1, 1, 1, 3, 9, 1, 1, 2, 4, 3, 9, 2, 4, 3, 2, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 534
+s_utility_bellman_backed_up = 334
+3.2 s_joint_action = <right, right, down, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+....r
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 4, 1, 4, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 5, 25, 4, 16, 1, 1, 20, 5, 4, 1, 1, 1, 4, 16, 1, 1, 3, 9, 4, 16, 3, 9, 4, 3, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 774
+s_utility_bellman_backed_up = 574
+3.2 s_joint_action = <right, right, down, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p..r
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 2, 4, 24, 4, 3, 2, 1, 1, 4, 16, 1, 1, 3, 9, 4, 16, 3, 9, 4, 3, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 773
+s_utility_bellman_backed_up = 573
+3.2 s_joint_action = <right, right, down, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 2, 4, 24, 4, 3, 2, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 515
+s_utility_bellman_backed_up = 315
+3.2 s_joint_action = <right, right, up, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+..p..
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 3, 2, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 1, 1, 8, 4, 2, 1, 2, 4, 3, 9, 2, 4, 3, 9, 3, 9, 3, 9, 6, 6, 9, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 619
+s_utility_bellman_backed_up = 419
+3.2 s_joint_action = <right, right, up, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp.r
+.....
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 4, 1, 4, 3, 2, 3, 2, 1, 0, 1, 3, 9, 3, 5, 25, 3, 9, 1, 1, 15, 5, 3, 1, 2, 4, 4, 16, 2, 4, 2, 4, 4, 16, 2, 4, 8, 4, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 703
+s_utility_bellman_backed_up = 503
+3.2 s_joint_action = <right, right, up, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+.p...
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 3, 1, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 2, 4, 16, 4, 2, 2, 2, 4, 4, 16, 2, 4, 4, 16, 4, 16, 4, 16, 8, 8, 16, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 868
+s_utility_bellman_backed_up = 668
+3.2 s_joint_action = <right, right, up, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v.r
+...p.
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 3, 3, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 2, 4, 16, 4, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 542
+s_utility_bellman_backed_up = 342
+3.2 s_joint_action = <right, right, left, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..pr.
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 3, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 1, 1, 8, 4, 2, 1, 2, 4, 3, 9, 2, 4, 1, 1, 3, 9, 1, 1, 6, 2, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 485
+s_utility_bellman_backed_up = 285
+3.2 s_joint_action = <right, right, left, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+...r.
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 4, 1, 3, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 5, 25, 3, 9, 1, 1, 15, 5, 3, 1, 2, 4, 4, 16, 2, 4, 2, 4, 4, 16, 2, 4, 8, 4, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 701
+s_utility_bellman_backed_up = 501
+3.2 s_joint_action = <right, right, left, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p.r.
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 3, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 2, 4, 2, 4, 16, 4, 2, 2, 2, 4, 4, 16, 2, 4, 2, 4, 4, 16, 2, 4, 8, 4, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 690
+s_utility_bellman_backed_up = 490
+3.2 s_joint_action = <right, right, left, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 2, 4, 24, 4, 3, 2, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 515
+s_utility_bellman_backed_up = 315
+3.2 s_joint_action = <right, right, right, down, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+..p.r
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 2, 2, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 1, 1, 12, 4, 3, 1, 1, 1, 3, 9, 1, 1, 2, 4, 3, 9, 2, 4, 3, 2, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 534
+s_utility_bellman_backed_up = 334
+3.2 s_joint_action = <right, right, right, up, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+.vp..
+....r
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 1, 3, 4, 1, 4, 2, 2, 3, 2, 1, 0, 1, 3, 9, 3, 5, 25, 4, 16, 1, 1, 20, 5, 4, 1, 1, 1, 4, 16, 1, 1, 3, 9, 4, 16, 3, 9, 4, 3, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 774
+s_utility_bellman_backed_up = 574
+3.2 s_joint_action = <right, right, right, left, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+.p..r
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 2, 1, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 2, 4, 24, 4, 3, 2, 1, 1, 4, 16, 1, 1, 3, 9, 4, 16, 3, 9, 4, 3, 12, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 773
+s_utility_bellman_backed_up = 573
+3.2 s_joint_action = <right, right, right, right, >
+prev state:
+-------------------
+.v...
+..p.r
+..or.
+.....
+
+next state:
+-------------------
+..v..
+...pr
+..o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 2, 3, 4, 1, 4, 2, 3, 2, 2, 1, 0, 1, 4, 16, 4, 4, 16, 3, 9, 2, 4, 24, 4, 3, 2, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 515
+s_utility_bellman_backed_up = 315
+3.3 s_utility = 658
+best_s_utility_bellman_backed_up = 866
+Prev feature_weight_list:
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+Post feature_weight_list:
+1.0208, 1.0624, 1.0624, 1.0208, 1.0832, 1.0416, 1.0416, 1.0416, 1.0416, 1.0208, 1, 1.0208, 2.0624, 4.1872, 2.0624, 2.0832, 4.3328, 2.0832, 4.3328, 2.0416, 4.0832, 6.6656, 2.0832, 2.0832, 2.0416, 2.0416, 4.0832, 2.0416, 4.0832, 2.0416, 4.0832, 2.0416, 4.0832, 2.0416, 4.0832, 2.0416, 4.0832, 6.0832, 6.0832, 6.0832, 20.0208, 
+ApproximateValueIteration
+*1. num of features weight = 41
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+*2.1 Sample a Regular state = 
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+*2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 3, 3, 3, 1, 3, 2, 2, 2, 1, 0, 1, 6, 36, 6, 1, 1, 3, 9, 3, 9, 9, 1, 3, 3, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+best actions = down, 
+3.2 s_joint_action = <down, down, down, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.....
+.rprv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 1, 2, 2, 2, 2, 1, 0, 1, 5, 25, 5, 1, 1, 3, 9, 2, 4, 6, 1, 3, 2, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 372
+s_utility_bellman_backed_up = 172
+3.2 s_joint_action = <down, down, down, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..p..
+.r.rv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 1, 2, 2, 3, 2, 1, 0, 1, 5, 25, 5, 1, 1, 3, 9, 3, 9, 9, 1, 3, 3, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 513
+s_utility_bellman_backed_up = 313
+3.2 s_joint_action = <down, down, down, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r...
+.p.rv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 1, 1, 4, 16, 3, 9, 12, 1, 4, 3, 3, 9, 2, 4, 3, 9, 1, 1, 2, 4, 1, 1, 6, 3, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 572
+s_utility_bellman_backed_up = 372
+3.2 s_joint_action = <down, down, down, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+...r.
+.r.pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 2, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 1, 1, 6, 2, 3, 1, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 482
+s_utility_bellman_backed_up = 282
+3.2 s_joint_action = <down, down, up, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r...
+..prv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 1, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 1, 1, 4, 16, 2, 4, 8, 1, 4, 2, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 525
+s_utility_bellman_backed_up = 325
+3.2 s_joint_action = <down, down, up, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rp..
+...rv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 1, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 1, 1, 4, 16, 3, 9, 12, 1, 4, 3, 3, 9, 2, 4, 3, 9, 1, 1, 2, 4, 1, 1, 6, 3, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 574
+s_utility_bellman_backed_up = 374
+3.2 s_joint_action = <down, down, up, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r...
+.p.rv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 1, 1, 4, 16, 3, 9, 12, 1, 4, 3, 3, 9, 2, 4, 3, 9, 1, 1, 2, 4, 1, 1, 6, 3, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 572
+s_utility_bellman_backed_up = 372
+3.2 s_joint_action = <down, down, up, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 1, 1, 8, 2, 4, 1, 2, 4, 1, 1, 2, 4, 3, 9, 1, 1, 3, 9, 2, 6, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 527
+s_utility_bellman_backed_up = 327
+3.2 s_joint_action = <down, down, left, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r....
+..prv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 0, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 1, 1, 5, 25, 2, 4, 10, 1, 5, 2, 4, 16, 1, 1, 4, 16, 3, 9, 1, 1, 3, 9, 4, 12, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 728
+s_utility_bellman_backed_up = 528
+3.2 s_joint_action = <down, down, left, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r.p..
+...rv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 0, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 1, 1, 5, 25, 3, 9, 15, 1, 5, 3, 4, 16, 2, 4, 4, 16, 2, 4, 2, 4, 2, 4, 8, 8, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 773
+s_utility_bellman_backed_up = 573
+3.2 s_joint_action = <down, down, left, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r....
+.p.rv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 0, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 1, 1, 5, 25, 3, 9, 15, 1, 5, 3, 4, 16, 2, 4, 4, 16, 2, 4, 2, 4, 2, 4, 8, 8, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 771
+s_utility_bellman_backed_up = 571
+3.2 s_joint_action = <down, down, left, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r..r.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 1, 1, 10, 2, 5, 1, 3, 9, 1, 1, 3, 9, 4, 16, 1, 1, 4, 16, 3, 12, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 730
+s_utility_bellman_backed_up = 530
+3.2 s_joint_action = <down, down, right, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..r..
+..prv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 2, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 1, 1, 3, 9, 2, 4, 6, 1, 3, 2, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 374
+s_utility_bellman_backed_up = 174
+3.2 s_joint_action = <down, down, right, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rp..
+...rv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 1, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 1, 1, 4, 16, 3, 9, 12, 1, 4, 3, 3, 9, 2, 4, 3, 9, 1, 1, 2, 4, 1, 1, 6, 3, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 574
+s_utility_bellman_backed_up = 374
+3.2 s_joint_action = <down, down, right, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..r..
+.p.rv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 2, 2, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 1, 1, 3, 9, 3, 9, 9, 1, 3, 3, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 513
+s_utility_bellman_backed_up = 313
+3.2 s_joint_action = <down, down, right, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..rr.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 2, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 1, 1, 6, 2, 3, 1, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 376
+s_utility_bellman_backed_up = 176
+3.2 s_joint_action = <down, up, down, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+...r.
+.rp.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 2, 2, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 2, 4, 12, 2, 3, 2, 3, 9, 2, 4, 3, 9, 1, 1, 2, 4, 1, 1, 6, 3, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 533
+s_utility_bellman_backed_up = 333
+3.2 s_joint_action = <down, up, down, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..pr.
+.r..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 2, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 3, 9, 18, 2, 3, 3, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 594
+s_utility_bellman_backed_up = 394
+3.2 s_joint_action = <down, up, down, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 3, 9, 2, 4, 1, 1, 3, 9, 1, 1, 6, 2, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 661
+s_utility_bellman_backed_up = 461
+3.2 s_joint_action = <down, up, down, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+...r.
+.r.pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 2, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 1, 1, 6, 2, 3, 1, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 482
+s_utility_bellman_backed_up = 282
+3.2 s_joint_action = <down, up, up, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 2, 4, 16, 2, 4, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 580
+s_utility_bellman_backed_up = 380
+3.2 s_joint_action = <down, up, up, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rpr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 555
+s_utility_bellman_backed_up = 355
+3.2 s_joint_action = <down, up, up, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 3, 9, 2, 4, 1, 1, 3, 9, 1, 1, 6, 2, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 661
+s_utility_bellman_backed_up = 461
+3.2 s_joint_action = <down, up, up, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 1, 1, 8, 2, 4, 1, 2, 4, 1, 1, 2, 4, 3, 9, 1, 1, 3, 9, 2, 6, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 527
+s_utility_bellman_backed_up = 327
+3.2 s_joint_action = <down, up, left, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r..r.
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 2, 4, 20, 2, 5, 2, 3, 9, 2, 4, 3, 9, 3, 9, 2, 4, 3, 9, 6, 9, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 785
+s_utility_bellman_backed_up = 585
+3.2 s_joint_action = <down, up, left, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r.pr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 3, 9, 30, 2, 5, 3, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 738
+s_utility_bellman_backed_up = 538
+3.2 s_joint_action = <down, up, left, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r..r.
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 3, 9, 30, 2, 5, 3, 3, 9, 3, 9, 3, 9, 2, 4, 3, 9, 2, 4, 9, 6, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 868
+s_utility_bellman_backed_up = 668
+3.2 s_joint_action = <down, up, left, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r..r.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 1, 1, 10, 2, 5, 1, 3, 9, 1, 1, 3, 9, 4, 16, 1, 1, 4, 16, 3, 12, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 730
+s_utility_bellman_backed_up = 530
+3.2 s_joint_action = <down, up, right, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..rr.
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 2, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 2, 4, 12, 2, 3, 2, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 427
+s_utility_bellman_backed_up = 227
+3.2 s_joint_action = <down, up, right, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rpr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 555
+s_utility_bellman_backed_up = 355
+3.2 s_joint_action = <down, up, right, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..rr.
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 2, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 3, 9, 18, 2, 3, 3, 1, 1, 3, 9, 1, 1, 2, 4, 3, 9, 2, 4, 3, 2, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 594
+s_utility_bellman_backed_up = 394
+3.2 s_joint_action = <down, up, right, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..rr.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 2, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 1, 1, 6, 2, 3, 1, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 376
+s_utility_bellman_backed_up = 176
+3.2 s_joint_action = <down, left, down, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..r..
+.rp.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 2, 2, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 3, 9, 2, 4, 18, 3, 3, 2, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 484
+s_utility_bellman_backed_up = 284
+3.2 s_joint_action = <down, left, down, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..pr.
+.r..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 2, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 3, 9, 18, 2, 3, 3, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 594
+s_utility_bellman_backed_up = 394
+3.2 s_joint_action = <down, left, down, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rr..
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 4, 16, 3, 9, 36, 3, 4, 3, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 648
+s_utility_bellman_backed_up = 448
+3.2 s_joint_action = <down, left, down, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..r..
+.r.pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 2, 3, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 3, 9, 1, 1, 9, 3, 3, 1, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 513
+s_utility_bellman_backed_up = 313
+3.2 s_joint_action = <down, left, up, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rr..
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 4, 16, 2, 4, 24, 3, 4, 2, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 553
+s_utility_bellman_backed_up = 353
+3.2 s_joint_action = <down, left, up, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rpr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 555
+s_utility_bellman_backed_up = 355
+3.2 s_joint_action = <down, left, up, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rr..
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 4, 16, 3, 9, 36, 3, 4, 3, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 648
+s_utility_bellman_backed_up = 448
+3.2 s_joint_action = <down, left, up, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rr..
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 4, 16, 1, 1, 12, 3, 4, 1, 1, 1, 2, 4, 1, 1, 3, 9, 2, 4, 3, 9, 2, 3, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 574
+s_utility_bellman_backed_up = 374
+3.2 s_joint_action = <down, left, left, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r.r..
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 0, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 5, 25, 2, 4, 30, 3, 5, 2, 2, 4, 1, 1, 2, 4, 3, 9, 1, 1, 3, 9, 2, 6, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 736
+s_utility_bellman_backed_up = 536
+3.2 s_joint_action = <down, left, left, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r.pr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 3, 9, 30, 2, 5, 3, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 738
+s_utility_bellman_backed_up = 538
+3.2 s_joint_action = <down, left, left, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r.r..
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 0, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 5, 25, 3, 9, 45, 3, 5, 3, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 839
+s_utility_bellman_backed_up = 639
+3.2 s_joint_action = <down, left, left, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r.r..
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 0, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 5, 25, 1, 1, 15, 3, 5, 1, 2, 4, 2, 4, 2, 4, 4, 16, 2, 4, 4, 16, 4, 8, 8, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 773
+s_utility_bellman_backed_up = 573
+3.2 s_joint_action = <down, left, right, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rr..
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 4, 16, 2, 4, 24, 3, 4, 2, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 553
+s_utility_bellman_backed_up = 353
+3.2 s_joint_action = <down, left, right, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rpr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 555
+s_utility_bellman_backed_up = 355
+3.2 s_joint_action = <down, left, right, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rr..
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 4, 16, 3, 9, 36, 3, 4, 3, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 648
+s_utility_bellman_backed_up = 448
+3.2 s_joint_action = <down, left, right, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rr..
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 2, 3, 1, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 3, 9, 4, 16, 1, 1, 12, 3, 4, 1, 1, 1, 2, 4, 1, 1, 3, 9, 2, 4, 3, 9, 2, 3, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 574
+s_utility_bellman_backed_up = 374
+3.2 s_joint_action = <down, right, down, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+...r.
+.rp.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 2, 2, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 2, 4, 12, 2, 3, 2, 3, 9, 2, 4, 3, 9, 1, 1, 2, 4, 1, 1, 6, 3, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 533
+s_utility_bellman_backed_up = 333
+3.2 s_joint_action = <down, right, down, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..pr.
+.r..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 2, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 3, 9, 18, 2, 3, 3, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 594
+s_utility_bellman_backed_up = 394
+3.2 s_joint_action = <down, right, down, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 3, 9, 2, 4, 1, 1, 3, 9, 1, 1, 6, 2, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 661
+s_utility_bellman_backed_up = 461
+3.2 s_joint_action = <down, right, down, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+...r.
+.r.pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 2, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 1, 1, 6, 2, 3, 1, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 482
+s_utility_bellman_backed_up = 282
+3.2 s_joint_action = <down, right, up, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 2, 4, 16, 2, 4, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 580
+s_utility_bellman_backed_up = 380
+3.2 s_joint_action = <down, right, up, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rpr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 555
+s_utility_bellman_backed_up = 355
+3.2 s_joint_action = <down, right, up, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 3, 9, 2, 4, 1, 1, 3, 9, 1, 1, 6, 2, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 661
+s_utility_bellman_backed_up = 461
+3.2 s_joint_action = <down, right, up, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.r.r.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 1, 1, 8, 2, 4, 1, 2, 4, 1, 1, 2, 4, 3, 9, 1, 1, 3, 9, 2, 6, 3, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 527
+s_utility_bellman_backed_up = 327
+3.2 s_joint_action = <down, right, left, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r..r.
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 2, 4, 20, 2, 5, 2, 3, 9, 2, 4, 3, 9, 3, 9, 2, 4, 3, 9, 6, 9, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 785
+s_utility_bellman_backed_up = 585
+3.2 s_joint_action = <down, right, left, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r.pr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 3, 9, 30, 2, 5, 3, 3, 9, 1, 1, 3, 9, 2, 4, 1, 1, 2, 4, 3, 6, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 738
+s_utility_bellman_backed_up = 538
+3.2 s_joint_action = <down, right, left, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r..r.
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 3, 9, 30, 2, 5, 3, 3, 9, 3, 9, 3, 9, 2, 4, 3, 9, 2, 4, 9, 6, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 868
+s_utility_bellman_backed_up = 668
+3.2 s_joint_action = <down, right, left, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+r..r.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 0, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 5, 25, 1, 1, 10, 2, 5, 1, 3, 9, 1, 1, 3, 9, 4, 16, 1, 1, 4, 16, 3, 12, 4, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 730
+s_utility_bellman_backed_up = 530
+3.2 s_joint_action = <down, right, right, down, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..rr.
+..p.v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 2, 3, 2, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 2, 4, 12, 2, 3, 2, 1, 1, 2, 4, 1, 1, 1, 1, 2, 4, 1, 1, 2, 1, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 427
+s_utility_bellman_backed_up = 227
+3.2 s_joint_action = <down, right, right, up, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+.rpr.
+....v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 1, 3, 2, 3, 2, 1, 0, 1, 5, 25, 5, 2, 4, 4, 16, 3, 9, 24, 2, 4, 3, 2, 4, 1, 1, 2, 4, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 555
+s_utility_bellman_backed_up = 355
+3.2 s_joint_action = <down, right, right, left, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..rr.
+.p..v
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 2, 3, 1, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 3, 9, 18, 2, 3, 3, 1, 1, 3, 9, 1, 1, 2, 4, 3, 9, 2, 4, 3, 2, 6, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 594
+s_utility_bellman_backed_up = 394
+3.2 s_joint_action = <down, right, right, right, >
+prev state:
+-------------------
+.r.rv
+..p..
+..o..
+.....
+
+next state:
+-------------------
+..rr.
+...pv
+..o..
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+Funct ComputeFactoredStateUtility: num of features = 41
+Feature values = 4, 2, 3, 3, 2, 3, 3, 2, 2, 1, 0, 1, 5, 25, 5, 2, 4, 3, 9, 1, 1, 6, 2, 3, 1, 1, 1, 1, 1, 1, 1, 2, 4, 1, 1, 2, 4, 1, 2, 2, 1, 
+Feature weights = 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+3.2.4 s_reward = -200
+new_s_utility = 376
+s_utility_bellman_backed_up = 176
+3.3 s_utility = 563
+best_s_utility_bellman_backed_up = 668
+Prev feature_weight_list:
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+Post feature_weight_list:
+1.042, 1.0315, 1.0315, 1.0315, 1.0105, 1.0315, 1.021, 1.021, 1.021, 1.0105, 1, 1.0105, 2.063, 4.378, 2.063, 2.0105, 4.0105, 2.0315, 4.0945, 2.0315, 4.0945, 6.0945, 2.0105, 2.0315, 2.0315, 2.021, 4.042, 2.021, 4.042, 2.021, 4.042, 2.021, 4.042, 2.021, 4.042, 2.021, 4.042, 6.042, 6.042, 6.042, 20.0105, 

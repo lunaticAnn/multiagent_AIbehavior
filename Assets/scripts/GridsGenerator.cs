@@ -148,8 +148,8 @@ public class GridsGenerator : MonoBehaviour {
 		//---------------------------------------
 		// Shen
 		List<Vector2> robot_position = new List<Vector2> ();
-		robot_position.Add(new Vector2 (1,0));
-		robot_position.Add(new Vector2 (0,1));
+		robot_position.Add(new Vector2 (4,1));
+		robot_position.Add(new Vector2 (3,3));
 		List<Vector2> evador_position = new List<Vector2> ();
 		evador_position.Add(new Vector2 (4,3));
 		//---------------------------------------

@@ -1,0 +1,3895 @@
+ApproximateValueIteration
+1. num of features weight = 41
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+2.1 New sample = Coordinates: (0, 1), (3, 0), (4, 0), (3, 1), 
+initial state:
+-------------------
+.....
+.....
+v.op.
+...rr
+
+2.2 after num_new_exited_evaders=1
+after num_new_cornered_evaders=0
+EXIT or CAPTURED
+best actions = up, 
+3.2 s_joint_action = <up, down, down, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, down, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, down, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, down, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, up, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..opr
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, up, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o.r
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, up, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..opr
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, up, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, left, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, left, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, left, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, left, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, right, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, right, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, right, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, down, right, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, down, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, down, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..or.
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, down, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, down, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..orp
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, up, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..opr
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, up, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..orr
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, up, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..opr
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, up, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..orp
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, left, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, left, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..or.
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, left, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, left, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..orp
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, right, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, right, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..or.
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, right, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, up, right, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..orp
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, down, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, down, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, down, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, down, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, up, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..opr
+..r..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, up, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o.r
+..r..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, up, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..opr
+..r..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, up, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, left, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+..rr.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, left, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+..rr.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, left, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+..rr.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, left, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+..rr.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, right, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, right, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, right, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, left, right, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+..r.r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, down, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, down, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, down, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, down, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, up, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..opr
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, up, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o.r
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, up, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..opr
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, up, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, left, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, left, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, left, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, left, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, right, down, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, right, up, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+...p.
+..o..
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, right, left, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.2 s_joint_action = <up, right, right, right, >
+prev state:
+-------------------
+.....
+.....
+..op.
+...rr
+
+next state:
+-------------------
+.....
+.....
+..o.p
+...rr
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -305000
+new_s_utility = 5208
+s_utility_bellman_backed_up = -299792
+3.3 s_utility = 5208
+best_s_utility_bellman_backed_up = -299792
+Prev feature_weight_list:
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, 2, 2, 2, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 6, 6, 6, 20, 
+Post feature_weight_list:
+31.5, 31.5, -90.5, 1, -121, 1, -90.5, -29.5, -60, -29.5, 1, -29.5, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, -28.5, -28.5, -28.5, -28.5, -26.5, -28.5, -26.5, -28.5, -26.5, -59, -118, -28.5, -26.5, -59, -118, -24.5, -55, -55, -10.5, 
+2.1 New sample = Coordinates: (2, 3), (0, 0), (4, 0), (3, 2), 
+initial state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+best actions = right, 
+3.2 s_joint_action = <right, down, down, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, down, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, down, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, down, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, up, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..opr
+r....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, up, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o.r
+r....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, up, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o.r
+r....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, up, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o.r
+r....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, left, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+r..r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, left, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+r..r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, left, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+r..r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, left, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+r..r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, right, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, right, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, right, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, down, right, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, down, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+r.op.
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, down, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+r.o..
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, down, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+r.o..
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, down, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+r.o..
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, up, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+r.opr
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, up, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+r.o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, up, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+r.o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, up, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+r.o.r
+.....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, left, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+r.op.
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, left, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+r.o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, left, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+r.o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, left, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+r.o..
+...r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, right, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+r.op.
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, right, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+r.o..
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, right, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+r.o..
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, up, right, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+r.o..
+....r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, down, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, down, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, down, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, down, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, up, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..opr
+r....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, up, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o.r
+r....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, up, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o.r
+r....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, up, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o.r
+r....
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, left, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+r..r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, left, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+r..r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, left, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+r..r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, left, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+r..r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, right, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, right, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, right, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, left, right, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+r...r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, down, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+.r..r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, down, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+.r..r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, down, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+.r..r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, down, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+.r..r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, up, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..opr
+.r...
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, up, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o.r
+.r...
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, up, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o.r
+.r...
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, up, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o.r
+.r...
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, left, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+.r.r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, left, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+.r.r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, left, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+.r.r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, left, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+.r.r.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, right, down, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+.....
+..op.
+.r..r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, right, up, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+..vp.
+.....
+..o..
+.r..r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, right, left, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+..p..
+..o..
+.r..r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.2 s_joint_action = <right, right, right, right, >
+prev state:
+-------------------
+..v..
+...p.
+..o..
+r...r
+
+next state:
+-------------------
+...v.
+....p
+..o..
+.r..r
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -395694
+s_utility_bellman_backed_up = -400694
+3.3 s_utility = -395694
+best_s_utility_bellman_backed_up = -400694
+Prev feature_weight_list:
+31.5, 31.5, -90.5, 1, -121, 1, -90.5, -29.5, -60, -29.5, 1, -29.5, 2, 4, 2, 2, 4, 2, 4, 2, 4, 6, -28.5, -28.5, -28.5, -28.5, -26.5, -28.5, -26.5, -28.5, -26.5, -59, -118, -28.5, -26.5, -59, -118, -24.5, -55, -55, -10.5, 
+Post feature_weight_list:
+30.5, 30, -90.5, 1, -123, 1, -92, -30.5, -61, -30, 1, -30, 0, -4, 0, -0.5, -8.5, -0.5, -8.5, 1, 2, -19, -31, -31, -29.5, -30.5, -34.5, -31, -39, -30.5, -34.5, -60.5, -122.5, -31, -39, -60.5, -122.5, -34.5, -61, -62.5, -11, 
+2.1 New sample = Coordinates: (3, 3), (3, 1), (1, 3), (3, 0), 
+initial state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+best actions = right, 
+3.2 s_joint_action = <right, down, down, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, down, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, down, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..o..
+..pr.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, down, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..o..
+...rp
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, up, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, up, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, up, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..o..
+..pr.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, up, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..o..
+...rp
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, left, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, left, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, left, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..o..
+..pr.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, left, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..o..
+...rp
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, right, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, right, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, right, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..o..
+..pr.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, down, right, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..o..
+...rp
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, down, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r.r.
+..o..
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, down, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r.r.
+..o..
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, down, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r.r.
+..o..
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, down, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r.r.
+..o..
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, up, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+...r.
+..o..
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, up, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+...r.
+..o..
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, up, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+...r.
+..o..
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, up, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+...r.
+..o..
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, left, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+...r.
+..o..
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, left, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+...r.
+..o..
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, left, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+...r.
+..o..
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, left, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+...r.
+..o..
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, right, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+...r.
+..o..
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, right, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+...r.
+..o..
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, right, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+...r.
+..o..
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, up, right, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+...r.
+..o..
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, down, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, down, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, down, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..or.
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, down, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..or.
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, up, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, up, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, up, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..or.
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, up, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..or.
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, left, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, left, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, left, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..or.
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, left, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..or.
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, right, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, right, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..or.
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, right, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..or.
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, left, right, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..or.
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, down, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..o.r
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, down, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..o.r
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, down, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..o.r
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, down, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+....v
+.r...
+..o.r
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, up, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..o.r
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, up, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..o.r
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, up, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..o.r
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, up, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+.r..v
+.....
+..o.r
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, left, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..o.r
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, left, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..o.r
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, left, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..o.r
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, left, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+r...v
+.....
+..o.r
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, right, down, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..o.r
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, right, up, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..o.r
+...p.
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, right, left, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..o.r
+..p..
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.2 s_joint_action = <right, right, right, right, >
+prev state:
+-------------------
+.r.v.
+.....
+..or.
+...p.
+
+next state:
+-------------------
+..r.v
+.....
+..o.r
+....p
+
+3.2.2 after num_new_exited_evaders=0
+after num_new_cornered_evaders=0
+3.2.4 s_reward = -5000
+new_s_utility = -309424
+s_utility_bellman_backed_up = -314424
+3.3 s_utility = -309424
+best_s_utility_bellman_backed_up = -314424
+Prev feature_weight_list:
+30.5, 30, -90.5, 1, -123, 1, -92, -30.5, -61, -30, 1, -30, 0, -4, 0, -0.5, -8.5, -0.5, -8.5, 1, 2, -19, -31, -31, -29.5, -30.5, -34.5, -31, -39, -30.5, -34.5, -60.5, -122.5, -31, -39, -60.5, -122.5, -34.5, -61, -62.5, -11, 
+Post feature_weight_list:
+29, 28.5, -92, 0.5, -123.5, -0.5, -93.5, -30.5, -62, -30.5, 1, -30.5, -2.5, -16.5, -2.5, -1.5, -10.5, -1.5, -10.5, -0.5, -2.5, -25, -32, -32, -31, -32.5, -42.5, -31.5, -39.5, -32.5, -42.5, -63, -135, -31.5, -39.5, -63, -135, -36.5, -71, -65, -11.5, 

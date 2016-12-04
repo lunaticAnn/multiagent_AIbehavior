@@ -47,7 +47,19 @@ public class V2Int {
 	public override string ToString(){
 		return "("+this._x+", "+this._y+")";
 	}
-
+	public float CartesianDistance(V2Int another_pt){
+		return Mathf.Sqrt((another_pt._x - this._x) * (another_pt._x - this._x)
+			+ (another_pt._y - this._y) * (another_pt._y - this._y));
+	}
+	public float ManhattanDistance(V2Int another_pt){
+		return Mathf.Abs(another_pt._x - this._x)+Mathf.Abs(another_pt._y - this._y);
+	}
+	public bool InMapBound(int num_col, int num_row){
+		if (this._x<0 || this._x>=num_col ||this._y<0||this._y>= num_row){
+			return false;
+		}
+		return true;
+	}
 
 //	https://msdn.microsoft.com/en-US/library/ms173147%28v=vs.80%29.aspx
 	public override bool Equals(System.Object obj) {
