@@ -23,8 +23,4 @@ public class RobotsBehaveMDP : moving {
 		grid_node target=sg.get_neighbour(current_node,o);
 		move_to_grid(sg,target);
 	}
-
-	void mdp_move(int opt_action){
-		move(SquareGrid.Four_dir[opt_action]);
-	}
 }

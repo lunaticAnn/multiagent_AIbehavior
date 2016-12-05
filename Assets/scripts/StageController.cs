@@ -66,15 +66,11 @@ public class StageController : MonoBehaviour {
 				stage_processed=true;
 				// update the pos of each agent
 				RobotsMDP.instance.UpdateAgentsPos();
-//				Debug.LogWarning ("before");
-
-				List<int> opt_actions = RobotsMDP.instance.ComputeOptActions();
-//				Debug.LogWarning ("after");
-
+				List<SquareGrid.orientation> opt_actions = RobotsMDP.instance.ComputeOptActions();
 				GameObject[] robot_instance=GameObject.FindGameObjectsWithTag("robot");
-//				for (int i = 0; i < robot_instance.Length; i++) {
-//					robot_instance[i].SendMessage("mdp_move", opt_actions[i]);
-//				}
+				for (int i = 0; i < robot_instance.Length; i++) {
+					robot_instance[i].SendMessage("move", opt_actions[i]);
+				}
 				StartCoroutine("stage_yield");}
 			return;
 

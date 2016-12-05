@@ -35,9 +35,9 @@ public class RobotsMDP : MonoBehaviour {
 	private const float k_gamma_ = 1.0f;
 	private const float k_epsilon_ = 0.001f;
 	// 10*utility
-	private const float k_reward_per_cornered_ = 2000.0f;
-	private const float k_reward_per_exit_ = -1500.0f;
-	private const float k_reward_per_action_ = -200.0f;
+	private const float k_reward_per_cornered_ = 200.0f;
+	private const float k_reward_per_exit_ = -150.0f;
+	private const float k_reward_per_action_ = -20.0f;
 	private const float k_alpha_ = 0.0001f;
 
 	private const float k_exited_sample_pr_ = 0.2f;
@@ -630,23 +630,241 @@ public class RobotsMDP : MonoBehaviour {
 		return state_utility;
 	}
 
+	private void ComputeOptimalAction(List<V2Int> evaders_pos, List<V2Int> robots_pos, 
+		V2Int player_pos, List<float> feature_weight_list, 
+		ref float best_utility_bellman_backed_up, ref List<SquareGrid.orientation> best_joint_action,
+		ref float utility, ref List<float> feature_list, ref float reward){
+
+		// ------------------------------------------------------------------------
+		// 1 check cornered and exited
+		// XXX: when sampling, we don't care about cornered or exited. We only randomly place agents on map.
+		// so the first thing we should do is to check if cornered or exited happens in the current state map
+		int num_new_exited_evaders = 0;
+		int num_new_cornered_evaders = 0;
+		this.CheckCorneredExitedEvaders (ref evaders_pos, robots_pos, player_pos, 
+			ref num_new_exited_evaders, ref num_new_cornered_evaders);
+		this.debug_content_ += "*2.2 after num_new_exited_evaders="+num_new_exited_evaders.ToString() +"\n";
+		this.debug_content_ += "after num_new_cornered_evaders="+num_new_cornered_evaders.ToString() +"\n";
+		if (num_new_exited_evaders != 0) {
+			this.debug_content_ += "$$$EXIT" +"\n";
+		}
+		if (num_new_cornered_evaders != 0) {
+			this.debug_content_ += "$$$CAPTURED" +"\n";
+		}
+
+		// ------------------------------------------------------------------------
+		// 2 compute reward for the current state
+		// XXX: compute reward of this state
+		reward = k_reward_per_action_
+			+ num_new_exited_evaders * k_reward_per_exit_
+			+ num_new_cornered_evaders * k_reward_per_cornered_;
+		
+		// 3 compute the utility for the current state
+		feature_list = new List<float> ();
+		utility = ComputeFactoredStateUtility (evaders_pos, robots_pos, 
+			player_pos, feature_weight_list, ref feature_list);
+
+		// ------------------------------------------------------------------------
+		// 4 bellman back-ups
+		// ------------------------------------------------------------------------
+		// 4.1 remove actions which are incompatible with evader model
+		// 4.1.1 evader model
+		// (1) closer to exit
+		// (2) far from robots and humans
+		List<SquareGrid.orientation> best_actions_evaders = new List<SquareGrid.orientation> ();
+		for (int i = 0; i < this.cur_evaders_pos_.Count; i++) {
+			V2Int evader_pos = evaders_pos [i];
+			// XXX: when sampling, we don't care about cornered or exited. We only randomly place agents on map.
+			// so the first thing we should do is to check if cornered or exited happens in the current state map
+			// XXX: if the evader is cornered, there is no action available.
+			// Then we assign it action dummy UP and put it at (-1,-1)
+			if (evader_pos == this.cornered_evader_pos_ || evader_pos == this.exited_evader_pos_) {
+				best_actions_evaders.Add (this.dummy_evader_action_);
+			} else {
+				SquareGrid.orientation best_action_evader;
+				List<SquareGrid.orientation> feasible_actions_evader_tmp = 
+					new List<SquareGrid.orientation> (SquareGrid.Four_dir);
+				List<SquareGrid.orientation> feasible_actions_evader = 
+					new List<SquareGrid.orientation> ();
+
+				// here we are modeling the evaders. 
+				// we assume that the evaders are smart enough to not moving towards obstacles, 
+				// nor agents, nor out of map
+				// remove actions towards out of map
+				Dictionary<V2Int,bool> obstacles_map = this.BuildObstacleMap (evaders_pos, robots_pos, player_pos);
+				foreach (SquareGrid.orientation action_evader in feasible_actions_evader_tmp) {
+					V2Int new_evader_pos = evader_pos + (V2Int)(SquareGrid.orient [action_evader]);
+					if (new_evader_pos.InMapBound (this.k_num_col_, this.k_num_row_)
+						&& obstacles_map.ContainsKey (new_evader_pos) == false) {
+						feasible_actions_evader.Add (action_evader);
+					}
+				}
+
+				// distance for each of the 4 actions
+				List<float> max_dists_evader_pursuers = new List<float> ();
+				List<float> min_dists_evader_exits = new List<float> ();
+				foreach (SquareGrid.orientation action_evader in feasible_actions_evader) {
+					V2Int new_evader_pos = evader_pos +
+						(V2Int)(SquareGrid.orient [action_evader]);
+					List<float> dists_evader_pursuers = new List<float> ();
+					List<float> dists_evader_exits = new List<float> ();
+					foreach (V2Int robot_pos in robots_pos) {
+						dists_evader_pursuers.Add (new_evader_pos.ManhattanDistance (robot_pos));
+					}
+					dists_evader_pursuers.Add (new_evader_pos.ManhattanDistance (player_pos));
+					foreach (V2Int exit_pos in this.exits_pos_) {
+						dists_evader_exits.Add (new_evader_pos.ManhattanDistance (exit_pos));
+					}
+					max_dists_evader_pursuers.Add (dists_evader_pursuers 
+						[this.MaxIndices (dists_evader_pursuers) [0]]);
+					min_dists_evader_exits.Add (dists_evader_exits 
+						[this.MinIndices (dists_evader_exits) [0]]);
+				}
+
+				// find the best action based on its distance
+				List<int> min_indices_min_dists_evader_exits = this.MinIndices (min_dists_evader_exits);
+				if (min_indices_min_dists_evader_exits.Count == 1) {
+					best_action_evader = feasible_actions_evader [min_indices_min_dists_evader_exits [0]];
+				} else {
+					List<float> sliced_max_dists_evader_pursuers = new List<float> ();
+					foreach (int _ in min_indices_min_dists_evader_exits) {
+						sliced_max_dists_evader_pursuers.Add (max_dists_evader_pursuers [_]);
+					}
+					List<int> max_indices_sliced_max_dists_evader_pursuers = 
+						this.MaxIndices (sliced_max_dists_evader_pursuers);
+					if (max_indices_sliced_max_dists_evader_pursuers.Count == 1) {
+						best_action_evader = feasible_actions_evader 
+							[min_indices_min_dists_evader_exits 
+								[max_indices_sliced_max_dists_evader_pursuers [0]]];
+					} else {
+						best_action_evader = feasible_actions_evader 
+							[min_indices_min_dists_evader_exits 
+								[max_indices_sliced_max_dists_evader_pursuers 
+									[rnd_.Next (0, max_indices_sliced_max_dists_evader_pursuers.Count)]]];
+					}
+				}
+				best_actions_evaders.Add (best_action_evader);
+			}
+		}
+		string best_actions_evaders_str = "best actions = ";
+		foreach (SquareGrid.orientation best_action_evader in best_actions_evaders) {
+			best_actions_evaders_str += best_action_evader.ToString () + ", ";
+		}
+		this.debug_content_ += best_actions_evaders_str +"\n";
+
+		// 3.1.2 modify action list
+		List<List<SquareGrid.orientation>> joint_actions = 
+			new List<List<SquareGrid.orientation>> ();
+		foreach (List<SquareGrid.orientation> joint_action in this.joint_actions_) {
+			bool good = true;
+			for (int i = 0; i < this.cur_evaders_pos_.Count; i++) {
+				if (best_actions_evaders [i] != joint_action [i]) {
+					good = false;
+				}
+			}
+			if (good == true) {
+				List<SquareGrid.orientation> tmp = new List<SquareGrid.orientation> ();
+				for (int i = 0; i < joint_action.Count; i++) {
+					tmp.Add (joint_action [i]);
+				}
+				joint_actions.Add (tmp);
+			}
+		}
+
+		// ------------------------------------------------------------------------
+		// 4.2 update value using bellman equation
+		best_utility_bellman_backed_up = -1.0f;
+		best_joint_action = new List<SquareGrid.orientation> ();
+
+		for (int ii = 0; ii < joint_actions.Count; ii++) {
+			List<SquareGrid.orientation> joint_action = joint_actions [ii];
+
+			// 4.2.1 transition based on probability
+			List<V2Int> new_evaders_pos = new List<V2Int> ();
+			for (int i = 0; i < evaders_pos.Count; i++) {
+				new_evaders_pos.Add (new V2Int (evaders_pos [i]));
+			}
+			List<V2Int> new_robots_pos = new List<V2Int> ();
+			for (int i = 0; i < robots_pos.Count; i++) {
+				new_robots_pos.Add (new V2Int (robots_pos [i]));
+			}
+			V2Int new_player_pos = new V2Int (new V2Int (player_pos));
+
+			// XXX: (-1,-1) will still stay at (-1,-1)
+			this.debug_content_ += "3.2 s_joint_action = " + this.ActionToString (joint_action) +"\n";
+			this.debug_content_ += "prev state:\n" + this.DrawOccupancyMap
+				(new_evaders_pos, new_robots_pos, new_player_pos) + "\n";
+			this.StateTransiter (joint_action, ref new_evaders_pos, ref new_robots_pos, ref new_player_pos);
+			this.debug_content_ += "next state:\n" + this.DrawOccupancyMap
+				(new_evaders_pos, new_robots_pos, new_player_pos) + "\n";
+
+			// 4.2.2 computing reward
+			// 4.2.2.1 check if exiting successfully
+			// 4.2.2.2 check if cornered
+			// 4.2.2.3 move cornered or exited evaders away from the map
+			num_new_exited_evaders = 0;
+			num_new_cornered_evaders = 0;
+			List<V2Int> new_evaders_pos_original = new List<V2Int> ();
+			for (int i = 0; i < new_evaders_pos.Count; i++) {
+				new_evaders_pos_original.Add (new V2Int(new_evaders_pos [i]));
+			}
+			this.CheckCorneredExitedEvaders (ref new_evaders_pos, new_robots_pos, new_player_pos, 
+				ref num_new_exited_evaders, ref num_new_cornered_evaders);
+			this.debug_content_ += "3.2.2 after num_new_exited_evaders="
+				+ num_new_exited_evaders.ToString () + "\n";
+			this.debug_content_ += "after num_new_cornered_evaders="
+				+ num_new_cornered_evaders.ToString () + "\n";
+
+			// 4.2.3 compute reward for the next state
+			float new_reward = k_reward_per_action_
+			                + num_new_exited_evaders * k_reward_per_exit_
+			                + num_new_cornered_evaders * k_reward_per_cornered_;
+
+			// 4.2.4 compute the utility for the next state
+			List<float> new_feature_list = new List<float> ();
+			float new_utility = ComputeFactoredStateUtility (new_evaders_pos, new_robots_pos, 
+				new_player_pos, feature_weight_list, ref new_feature_list);
+
+			// TODO: human model
+			// TODO: determined
+			// XXX: we don't use the reward of the next state. Instead, we use the reward of this state.
+			float utility_bellman_backed_up = reward + k_gamma_ * new_utility;
+			this.debug_content_ += "3.2.4 s_reward = " + reward.ToString () + "\n";
+			this.debug_content_ += "new_s_utility = " + new_utility.ToString () + "\n";
+			this.debug_content_ += "s_utility_bellman_backed_up = "
+				+ utility_bellman_backed_up.ToString () + "\n";
+
+			if (ii == 0) {
+				best_utility_bellman_backed_up = utility_bellman_backed_up;
+				best_joint_action = joint_action;
+			} else if (utility_bellman_backed_up > best_utility_bellman_backed_up) {
+				best_joint_action = joint_action;
+			}
+		}
+		this.debug_content_ += "4.2.4 s_utility = " + utility.ToString () + "\n";
+		this.debug_content_ += "best_utility_bellman_backed_up = "
+			+ best_utility_bellman_backed_up.ToString () + "\n";
+		this.debug_content_ += "best_joint_action = "
+			+ this.ActionToString(best_joint_action) + "\n";
+
+	}
 
 
 	// =======================================================================
 	// core functions
 	// =======================================================================
 
-	public List<int> ComputeOptActions() {
-		ApproximateValueIteration ();
-		List<int> opt_actions = new List<int> ();
-		for (int i = 0; i < this.cur_robots_pos_.Count; i++) {
-			//			opt_actions.Add (Random.Range (0, 4));
-			opt_actions.Add (1);
-		}
-		return opt_actions;
+	public List<SquareGrid.orientation> ComputeOptActions() {
+		List<SquareGrid.orientation> robots_opt_cur_action = this.ApproximateValueIteration ();
+//		List<int> opt_actions = new List<int> ();
+//		for (int i = 0; i < this.cur_robots_pos_.Count; i++) {
+//			//			opt_actions.Add (Random.Range (0, 4));
+//			opt_actions.Add (1);
+//		}
+		return robots_opt_cur_action;
 	}
 
-	private void ApproximateValueIteration() {
+	private List<SquareGrid.orientation> ApproximateValueIteration() {
 //		Debug.LogWarning ("ApproximateValueIteration");
 		this.debug_content_ += "ApproximateValueIteration\n";
 		// ------------------------------------------------------------------------
@@ -760,9 +978,7 @@ public class RobotsMDP : MonoBehaviour {
 
 		bool converged = false;
 		int counter = 0;
-		while (counter < 1000) {
-			counter += 1;
-
+		while (true) {
 			// ------------------------------------------------------------------------
 			// 2 initialize the current state
 			// ------------------------------------------------------------------------
@@ -871,250 +1087,16 @@ public class RobotsMDP : MonoBehaviour {
 //			Debug.LogAssertion (s_evaders_pos.Count == this.cur_evaders_pos_.Count);
 //			Debug.LogAssertion (s_robots_pos.Count == this.cur_robots_pos_.Count);
 
-			// ------------------------------------------------------------------------
-			// 2.2 check cornered and exited
-			// XXX: when sampling, we don't care about cornered or exited. We only randomly place agents on map.
-			// so the first thing we should do is to check if cornered or exited happens in the current state map
-			int num_new_exited_evaders = 0;
-			int num_new_cornered_evaders = 0;
-			this.CheckCorneredExitedEvaders (ref s_evaders_pos, s_robots_pos, s_player_pos, 
-				ref num_new_exited_evaders, ref num_new_cornered_evaders);
-//			foreach (V2Int xx in s_evaders_pos) {
-//				Debug.LogWarning ("after cornered="+xx.ToString());
-//			}
-//			Debug.LogWarning ("after num_new_exited_evaders="+num_new_exited_evaders.ToString());
-			this.debug_content_ += "*2.2 after num_new_exited_evaders="+num_new_exited_evaders.ToString() +"\n";
-//			Debug.LogWarning ("after num_new_cornered_evaders="+num_new_cornered_evaders.ToString());
-			this.debug_content_ += "after num_new_cornered_evaders="+num_new_cornered_evaders.ToString() +"\n";
 
-			if (num_new_exited_evaders != 0) {
-				this.debug_content_ += "$$$EXIT" +"\n";
-			}
-			if (num_new_cornered_evaders != 0) {
-				this.debug_content_ += "$$$CAPTURED" +"\n";
-			}
-
-			// ------------------------------------------------------------------------
-			// 2.3 compute reward for the current state
-			// XXX: compute reward of this state
-			float s_reward = k_reward_per_action_
-			                  + num_new_exited_evaders * k_reward_per_exit_
-			                  + num_new_cornered_evaders * k_reward_per_cornered_;
-			// 2.4 compute the utility for the current state
-			List<float> s_feature_list = new List<float> ();
-			float s_utility = ComputeFactoredStateUtility (s_evaders_pos, s_robots_pos, 
-				                  s_player_pos, feature_weight_list, ref s_feature_list);
-			
-			// ------------------------------------------------------------------------
-			// 3. bellman back-ups
-			// ------------------------------------------------------------------------
-			// 3.1 remove actions which are incompatible with evader model
-			// 3.1.1 evader model
-			// (1) closer to exit
-			// (2) far from robots and humans
-			List<SquareGrid.orientation> best_actions_evaders = new List<SquareGrid.orientation> ();
-			for (int i = 0; i < this.cur_evaders_pos_.Count; i++) {
-				V2Int evader_pos = s_evaders_pos [i];
-				// XXX: when sampling, we don't care about cornered or exited. We only randomly place agents on map.
-				// so the first thing we should do is to check if cornered or exited happens in the current state map
-				// XXX: if the evader is cornered, there is no action available.
-				// Then we assign it action dummy UP and put it at (-1,-1)
-				if (evader_pos == cornered_evader_pos_ || evader_pos == this.exited_evader_pos_) {
-					best_actions_evaders.Add (dummy_evader_action_);
-				} else {
-					SquareGrid.orientation best_action_evader;
-					List<SquareGrid.orientation> feasible_actions_evader_tmp = 
-						new List<SquareGrid.orientation> (SquareGrid.Four_dir);
-					List<SquareGrid.orientation> feasible_actions_evader = 
-						new List<SquareGrid.orientation> ();
-
-					// here we are modeling the evaders. 
-					// we assume that the evaders are smart enough to not moving towards obstacles, 
-					// nor agents, nor out of map
-					// remove actions towards out of map
-					obstacles_map = this.BuildObstacleMap 
-						(s_evaders_pos, s_robots_pos, s_player_pos);
-					foreach (SquareGrid.orientation action_evader in feasible_actions_evader_tmp) {
-						V2Int new_evader_pos = evader_pos + (V2Int)(SquareGrid.orient [action_evader]);
-						if (new_evader_pos.InMapBound (this.k_num_col_, this.k_num_row_)
-						    && obstacles_map.ContainsKey (new_evader_pos) == false) {
-							feasible_actions_evader.Add (action_evader);
-						}
-					}
-//					Debug.LogWarning ("feasible action for evader = "+this.ActionToString 
-//						(feasible_actions_evader).ToString());
-//					this.debug_content_ += "3.1.1 feasible action for evader = "+this.ActionToString 
-//						(feasible_actions_evader).ToString() +"\n";
-
-
-					// distance for each of the 4 actions
-					List<float> max_dists_evader_pursuers = new List<float> ();
-					List<float> min_dists_evader_exits = new List<float> ();
-					foreach (SquareGrid.orientation action_evader in feasible_actions_evader) {
-						V2Int new_evader_pos = evader_pos +
-						                       (V2Int)(SquareGrid.orient [action_evader]);
-						List<float> dists_evader_pursuers = new List<float> ();
-						List<float> dists_evader_exits = new List<float> ();
-						foreach (V2Int robot_pos in s_robots_pos) {
-							dists_evader_pursuers.Add (new_evader_pos.ManhattanDistance (robot_pos));
-						}
-						dists_evader_pursuers.Add (new_evader_pos.ManhattanDistance (s_player_pos));
-						foreach (V2Int exit_pos in this.exits_pos_) {
-							V2Int aa = new V2Int (4, 3);
-							dists_evader_exits.Add (new_evader_pos.ManhattanDistance (aa));
-						}
-						max_dists_evader_pursuers.Add (dists_evader_pursuers [this.MaxIndices (dists_evader_pursuers) [0]]);
-						min_dists_evader_exits.Add (dists_evader_exits [this.MinIndices (dists_evader_exits) [0]]);
-					}
-
-					// find the best action based on its distance
-					List<int> min_indices_min_dists_evader_exits = this.MinIndices (min_dists_evader_exits);
-					if (min_indices_min_dists_evader_exits.Count == 1) {
-						best_action_evader = feasible_actions_evader [min_indices_min_dists_evader_exits [0]];
-					} else {
-						List<float> sliced_max_dists_evader_pursuers = new List<float> ();
-						foreach (int _ in min_indices_min_dists_evader_exits) {
-							sliced_max_dists_evader_pursuers.Add (max_dists_evader_pursuers [_]);
-						}
-						List<int> max_indices_sliced_max_dists_evader_pursuers = 
-							this.MaxIndices (sliced_max_dists_evader_pursuers);
-						if (max_indices_sliced_max_dists_evader_pursuers.Count == 1) {
-							best_action_evader = feasible_actions_evader 
-								[min_indices_min_dists_evader_exits 
-									[max_indices_sliced_max_dists_evader_pursuers [0]]];
-						} else {
-							best_action_evader = feasible_actions_evader 
-								[min_indices_min_dists_evader_exits 
-									[max_indices_sliced_max_dists_evader_pursuers 
-										[rnd_.Next (0, max_indices_sliced_max_dists_evader_pursuers.Count)]]];
-						}
-					}
-					best_actions_evaders.Add (best_action_evader);
-				}
-			}
-			string best_actions_evaders_str = "best actions = ";
-			foreach (SquareGrid.orientation best_action_evader in best_actions_evaders) {
-				best_actions_evaders_str += best_action_evader.ToString () + ", ";
-			}
-			this.debug_content_ += best_actions_evaders_str +"\n";
-
-			// 3.1.2 modify action list
-			List<List<SquareGrid.orientation>> s_joint_actions = 
-				new List<List<SquareGrid.orientation>> ();
-			foreach (List<SquareGrid.orientation> joint_action in this.joint_actions_) {
-				bool good = true;
-				for (int i = 0; i < this.cur_evaders_pos_.Count; i++) {
-					if (best_actions_evaders [i] != joint_action [i]) {
-						good = false;
-					}
-				}
-				if (good == true) {
-					List<SquareGrid.orientation> tmp = new List<SquareGrid.orientation> ();
-					for (int i = 0; i < joint_action.Count; i++) {
-						tmp.Add (joint_action [i]);
-					}
-					s_joint_actions.Add (tmp);
-				}
-			}
-			// 64
-//			Debug.LogWarning (this.ActionsToString (s_joint_actions));
-			// ------------------------------------------------------------------------
-			// 3.2 update value using bellman equation
 			float best_s_utility_bellman_backed_up = -1.0f;
-//			List<V2Int> best_new_s_evaders_pos = new List<V2Int> ();
-//			List<V2Int> best_new_s_robots_pos = new List<V2Int> ();
-//			V2Int best_new_s_player_pos = new V2Int ();
-//			List<float> best_new_s_feature_list = new List<float> ();
-			for (int ii = 0; ii < s_joint_actions.Count; ii++) {
-				List<SquareGrid.orientation> s_joint_action = s_joint_actions [ii];
-				// 3.2.1 transition based on probability
-				List<V2Int> new_s_evaders_pos = new List<V2Int> ();
-				for (int i = 0; i < s_evaders_pos.Count; i++) {
-					new_s_evaders_pos.Add (new V2Int (s_evaders_pos [i]));
-				}
-				List<V2Int> new_s_robots_pos = new List<V2Int> ();
-				for (int i = 0; i < s_robots_pos.Count; i++) {
-					new_s_robots_pos.Add (new V2Int (s_robots_pos [i]));
-				}
-				V2Int new_s_player_pos = new V2Int (new V2Int (s_player_pos));
-				// XXX: (-1,-1) will still stay at (-1,-1)
-//				Debug.LogWarning ("-------------\n action: " + this.ActionToString (s_joint_action) + "\n");
-				this.debug_content_ += "3.2 s_joint_action = " + this.ActionToString (s_joint_action) +"\n";
-//				Debug.LogWarning ("prev state:\n" + this.DrawOccupancyMap 
-//					(new_s_evaders_pos, new_s_robots_pos, new_s_player_pos));
-				this.debug_content_ += "prev state:\n" + this.DrawOccupancyMap
-					(new_s_evaders_pos, new_s_robots_pos, new_s_player_pos) + "\n";
-				this.StateTransiter (s_joint_action, ref new_s_evaders_pos, 
-					ref new_s_robots_pos, ref new_s_player_pos);
-//				Debug.LogWarning ("next state:\n" + this.DrawOccupancyMap
-//					(new_s_evaders_pos, new_s_robots_pos, new_s_player_pos));
-				this.debug_content_ += "next state:\n" + this.DrawOccupancyMap
-					(new_s_evaders_pos, new_s_robots_pos, new_s_player_pos) + "\n";
+			List<SquareGrid.orientation> best_s_joint_action = new List<SquareGrid.orientation> ();
+			float s_utility = 0.0f;
+			List<float> s_feature_list = new List<float> ();
+			float s_reward = 0.0f;
+			this.ComputeOptimalAction (s_evaders_pos, s_robots_pos, s_player_pos, 
+				feature_weight_list, ref best_s_utility_bellman_backed_up, ref best_s_joint_action,
+				ref s_utility, ref s_feature_list, ref s_reward);
 
-				// 3.2.2 computing reward
-				// 3.2.2.1 check if exiting successfully
-				// 3.2.2.2 check if cornered
-				// 3.2.2.3 move cornered or exited evaders away from the map
-				num_new_exited_evaders = 0;
-				num_new_cornered_evaders = 0;
-				List<V2Int> new_s_evaders_pos_original = new List<V2Int> ();
-				for (int i = 0; i < new_s_evaders_pos.Count; i++) {
-					new_s_evaders_pos_original.Add (new_s_evaders_pos [i]);
-				}
-				this.CheckCorneredExitedEvaders (ref new_s_evaders_pos, new_s_robots_pos, new_s_player_pos, 
-					ref num_new_exited_evaders, ref num_new_cornered_evaders);
-//				foreach (V2Int xx in new_s_evaders_pos) {
-//					Debug.LogWarning ("after cornered=" + xx.ToString ());
-//				}
-//				Debug.LogWarning ("after num_new_exited_evaders=" + num_new_exited_evaders.ToString ());
-				this.debug_content_ += "3.2.2 after num_new_exited_evaders="
-					+ num_new_exited_evaders.ToString () + "\n";
-//				Debug.LogWarning ("after num_new_cornered_evaders=" + num_new_cornered_evaders.ToString ());
-				this.debug_content_ += "after num_new_cornered_evaders="
-					+ num_new_cornered_evaders.ToString () + "\n";
-				
-				// 3.2.3 compute reward
-				//			float new_s_reward = k_reward_per_action_
-				//			                + num_new_exited_evaders * k_reward_per_exit_
-				//			                + num_new_cornered_evaders * k_reward_per_cornered_;
-
-				// 3.2.4 compute the utility of next state
-				List<float> new_s_feature_list = new List<float> ();
-				float new_s_utility = ComputeFactoredStateUtility (new_s_evaders_pos, new_s_robots_pos, 
-					                      new_s_player_pos, feature_weight_list, ref new_s_feature_list);
-
-				// TODO: human model
-				// TODO: determined
-				// XXX: we don't use the reward of the next state. Instead, we use the reward of this state.
-				float s_utility_bellman_backed_up = s_reward + k_gamma_ * new_s_utility;
-//				Debug.LogWarning ("s_reward = " + s_reward.ToString ());
-				this.debug_content_ += "3.2.4 s_reward = " + s_reward.ToString () + "\n";
-//				Debug.LogWarning ("new_s_utility = " + new_s_utility.ToString ());
-				this.debug_content_ += "new_s_utility = " + new_s_utility.ToString () + "\n";
-//				Debug.LogWarning ("s_utility_bellman_backed_up = " + s_utility_bellman_backed_up.ToString ());
-				this.debug_content_ += "s_utility_bellman_backed_up = "
-					+ s_utility_bellman_backed_up.ToString () + "\n";
-				
-				if (ii == 0) {
-					best_s_utility_bellman_backed_up = s_utility_bellman_backed_up;
-//					best_new_s_evaders_pos = new_s_evaders_pos_original;
-//					best_new_s_robots_pos = new_s_robots_pos;
-//					best_new_s_player_pos = new_s_player_pos;
-//					best_new_s_feature_list = new_s_feature_list;
-				} else if (s_utility_bellman_backed_up > best_s_utility_bellman_backed_up) {
-					// TODO: >=???
-					best_s_utility_bellman_backed_up = s_utility_bellman_backed_up;
-//					best_new_s_evaders_pos = new_s_evaders_pos_original;
-//					best_new_s_robots_pos = new_s_robots_pos;
-//					best_new_s_player_pos = new_s_player_pos;
-//					best_new_s_feature_list = new_s_feature_list;
-				}
-			}
-//			Debug.LogWarning ("s_utility = " + s_utility.ToString ());
-			this.debug_content_ += "3.3 s_utility = " + s_utility.ToString () + "\n";
-//			Debug.LogWarning ("best_s_utility_bellman_backed_up = " + best_s_utility_bellman_backed_up.ToString ());
-			this.debug_content_ += "best_s_utility_bellman_backed_up = "
-				+ best_s_utility_bellman_backed_up.ToString () + "\n";
 
 			// ------------------------------------------------------------------------
 			// 4. Supervised learning
@@ -1176,8 +1158,16 @@ public class RobotsMDP : MonoBehaviour {
 			}
 			// for debugging
 			tolerance = 0.1f;
+			bool terminated = false;
 			if (max_diff < tolerance) {
 				converged = true;
+				terminated = true;
+			}
+			counter += 1;
+			if (counter >= 100) {
+				terminated = true;
+			}
+			if (terminated == true) {
 				break;
 			}
 
@@ -1187,6 +1177,24 @@ public class RobotsMDP : MonoBehaviour {
 			Debug.LogWarning ("CONVERGED!!!");
 			this.debug_content_ += "CONVERGED!!!" + "\n";
 		}
+
+		float opt_cur_utility_bellman_backed_up = -1.0f;
+		List<SquareGrid.orientation> opt_cur_joint_action = new List<SquareGrid.orientation> ();
+		float opt_cur_utility = 0.0f;
+		List<float> opt_cur_feature_list = new List<float> ();
+		float opt_cur_reward = 0.0f;
+		this.ComputeOptimalAction (this.cur_evaders_pos_, this.cur_robots_pos_, this.cur_player_pos_, 
+			feature_weight_list, ref opt_cur_utility_bellman_backed_up, ref opt_cur_joint_action,
+			ref opt_cur_utility, ref opt_cur_feature_list, ref opt_cur_reward);
+		foreach (SquareGrid.orientation aa in opt_cur_joint_action) {
+			Debug.LogWarning (aa);
+		}
+		List<SquareGrid.orientation> robots_opt_cur_action = new List<SquareGrid.orientation> ();
+		for (int i = this.cur_evaders_pos_.Count; i < this.cur_evaders_pos_.Count 
+			+ this.cur_robots_pos_.Count; i++) {
+			robots_opt_cur_action.Add (opt_cur_joint_action [i]);
+		}
+		return robots_opt_cur_action;
 	}
 }
 
