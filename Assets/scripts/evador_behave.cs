@@ -139,7 +139,7 @@ public class evador_behave : moving {
 
 		V2Int exit_pos=sg.nodes.Find(x=>x.state==SquareGrid.grid_stat.exit).grid_position;
 
-		return Manhattan(exit_pos,current_node.grid_position)-Mathf.Min(threat_manhattan);
+		return 2*Manhattan(exit_pos,current_node.grid_position)-Mathf.Min(threat_manhattan);
 	}
 
 
@@ -158,7 +158,7 @@ public class evador_behave : moving {
 		}
 
 		/* set next move with A* pathfinding and avoid pursuers*/
-		candidate=evador_next(sg,current_node);	    
+		candidate=evador_next2(sg,current_node);	    
 		if(candidate.state==SquareGrid.grid_stat.exit){
 			StageController.instance.score_evador+=1;
 			//remove self from board
@@ -197,7 +197,8 @@ public class evador_behave : moving {
 				int newMovementCostToNeighbour=currentNode.gCost + Manhattan(currentNode.grid_position,n.grid_position);
 				if(newMovementCostToNeighbour<n.gCost || !openSet.Contains(n)){
 					n.gCost = newMovementCostToNeighbour; 
-					n.hCost = Manhattan(n.grid_position,targetNode.grid_position);
+					//n.hCost = Manhattan(n.grid_position,targetNode.grid_position); evador_next2
+					n.hCost = evaluate_evador(n); //evador_next2
 					n.parent = currentNode;
 
 					if(!openSet.Contains(n)){
@@ -207,10 +208,42 @@ public class evador_behave : moving {
 			}
 
 		}
-		candidate=closedSet[1]; 
+		candidate=closedSet.Count>1?closedSet[1]:startNode;
 		return candidate;
 
 	}
+
+	grid_node evador_next1(SquareGrid sg,grid_node current_node){
+		grid_node candidate = astar (sg, current_node);
+		Debug.Log (candidate == null);
+		//if uninitialized, initialize
+		if (pursuers.Count == 0) {
+			GameObject[] robots = GameObject.FindGameObjectsWithTag ("robot");
+			foreach (GameObject r in robots)
+				pursuers.Add (r);
+			pursuers.Add (GameObject.FindGameObjectWithTag ("Player"));
+		}
+
+		//initialized, evaluate according to them
+		for (int i = 0; i < pursuers.Count; i++) {
+			foreach (grid_node n in sg.my_neighbours(pursuers[i].GetComponent<moving>().current_node)) {
+				if (sg.walkable (n) && (!n.occupied)) {
+					if (candidate.grid_position == n.grid_position) {
+						//If the possible next node of each pursuers overlaps the candidate,
+						//see the candidate node as an obstacle
+						candidate.occupied = true;
+						//recursive call, it will move since there are only three pursuers
+						candidate = evador_next (sg, candidate);
+					}
+				}
+			}
+//			if (candidate.occupied) {
+//				break;
+//			}
+		}
+		return candidate;
+	}
+
 
 	grid_node evador_next(SquareGrid sg,grid_node current_node){
 		grid_node candidate = astar(sg,current_node);
@@ -232,12 +265,19 @@ public class evador_behave : moving {
 						//If the possible next node of each pursuers overlaps the candidate,
 						//see the candidate node as an obstacle
 						candidate.occupied=true;//is that right??
-							//recursive call, it will move since there are only three pursuers
-							candidate = evador_next(sg,current_node); 
-						}			    
-					}
+						//recursive call, it will move since there are only three pursuers
+						candidate = evador_next(sg,current_node); 
+					}			    
+				}
 			}
 		}
+		return candidate;
+	}
+
+	grid_node evador_next2(SquareGrid sg,grid_node current_node){
+		grid_node candidate = astar(sg,current_node);
+		Debug.Log (candidate == null);
+		move_to_grid(sg,candidate);
 		return candidate;
 	}
 }

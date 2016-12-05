@@ -177,12 +177,15 @@ public class GridsGenerator : MonoBehaviour {
 
 	IEnumerator flash_them(List<grid_node> nbs){
 		foreach(grid_node nb in nbs){
+			if(!nb.occupied)
 			nb.gameObject.GetComponent<SpriteRenderer>().color=Color.red;}
 			yield return new WaitForSeconds(0.5f);
 		 foreach(grid_node nb in nbs){
+			if(!nb.occupied)
 			nb.gameObject.GetComponent<SpriteRenderer>().color=Color.yellow;}
 			yield return new WaitForSeconds(0.5f);
 		foreach(grid_node nb in nbs){
+			if(!nb.occupied)
 			nb.gameObject.gameObject.GetComponent<SpriteRenderer>().color=get_color(nb.state);}
 
 	}
