@@ -29,6 +29,10 @@ public class Robot_behave : moving {
 		move(SquareGrid.Four_dir[i]);
 	}
 
+    void move_received(grid_node next) {
+        move_to_grid(sg, next);
+    }
+
 	const int time_to_decide=3;
 	List<evador_behave> player_target=new List<evador_behave>();
 	Dictionary<evador_behave,int> previous_step=new Dictionary<evador_behave,int>();
@@ -56,10 +60,11 @@ public class Robot_behave : moving {
 		grid_node target_grid=next_closest_to_target(target_evador.current_node,exit_node);
 		target_grid.SendMessage("flash_me");
 		grid_node candidate=next_closest_to_target(current_node,target_grid);
+        
 		if(candidate!=null)
 			move_to_grid(sg,candidate);
 
-	}
+    }
 
 	void create_target_list(){
 		player_target.Clear();
@@ -103,6 +108,7 @@ public class Robot_behave : moving {
 				target_now=reward<min_reward?eb:target_now;
 			}
 		}
+        if(target_now)
 		target_now.SendMessage("flash_me");
 		return target_now;
 	}
@@ -129,11 +135,4 @@ public class Robot_behave : moving {
 
 }
 
-/*==========================Ideas of MDP_v2=======================
-     * For v2, the goal of the robots is to minimize the reward of the 
-     * evador who has the largest reward.Meanwhile, instead of using 
-     * player, we will design a robot using MDP with constant probabitlity.
-     * We call it as semi-human robot. 
-     * Therefore, another goal for the robot is to maximize the reward 
-	 * of the semi-human robot. (how to learn maximize other's reward?).
-     ================================================================*/
+

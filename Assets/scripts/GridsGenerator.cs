@@ -26,11 +26,21 @@ public class GridsGenerator : MonoBehaviour {
 
 	public SquareGrid g;
 
-	private int[,] test=new int[4,5]{{0,0,0,0,0},{9,1,-1,0,0},{0,0,0,1,0},{0,0,0,0,0}};
+	private int[,] test=new int[4,5]{{0,0,0,0,0},{9,1,0,0,0},{0,0,0,1,0},{0,0,0,0,0}};
 
+   /* private int[,] test = new int[10, 10] 
+    { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
+      { 9, 1, 0, 0, 0 , 0, 0, 0, 0, 0 },
+      { 0, 0, 0, 1, 0, 0, 0, 0, 0, 0  }, 
+      { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
+     { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
+     { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 }};*/
 
-
-	/*=================================================
+    /*=================================================
 	 * Inputs will be given in the form of grids that is:
 	 * [[0, 0, 0, 0],
 	 *  [9, 1,-1, 0],
@@ -46,7 +56,7 @@ public class GridsGenerator : MonoBehaviour {
 	*/
 
 
-	/*++++++++++++++++++++++++++++++++++++++++Reward Function++++++++++++++++++++++++++++++++++++++++++++++
+    /*++++++++++++++++++++++++++++++++++++++++Reward Function++++++++++++++++++++++++++++++++++++++++++++++
 	Call reward function as GridsGenerator.instance.get_grids(
 		 V2Int current_pos:this is the position of object who is requiring MDP,
 		 bool evador: true if it is evador, false if it is not.
@@ -54,7 +64,7 @@ public class GridsGenerator : MonoBehaviour {
 	I am still consfused about the reward function because it will be different
 	if you CAN /CAN NOT stay at the same grid with someone else.
     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-	const float r_exit_evador=100f;
+    const float r_exit_evador=100f;
 	const float r_pursuer_evador=-110f;
 	const float unmovable=-100f;
 	const float r_next_to_evador=100f;
@@ -177,16 +187,16 @@ public class GridsGenerator : MonoBehaviour {
 
 	IEnumerator flash_them(List<grid_node> nbs){
 		foreach(grid_node nb in nbs){
-			if(!nb.occupied)
-			nb.gameObject.GetComponent<SpriteRenderer>().color=Color.red;}
+            if (nb.occupied == false) 
+			    nb.gameObject.GetComponent<SpriteRenderer>().color=Color.red;}
 			yield return new WaitForSeconds(0.5f);
 		 foreach(grid_node nb in nbs){
-			if(!nb.occupied)
-			nb.gameObject.GetComponent<SpriteRenderer>().color=Color.yellow;}
+            if (nb.occupied == false)
+                nb.gameObject.GetComponent<SpriteRenderer>().color=Color.yellow;}
 			yield return new WaitForSeconds(0.5f);
 		foreach(grid_node nb in nbs){
-			if(!nb.occupied)
-			nb.gameObject.gameObject.GetComponent<SpriteRenderer>().color=get_color(nb.state);}
+            if (nb.occupied == false)
+                nb.gameObject.gameObject.GetComponent<SpriteRenderer>().color=get_color(nb.state);}
 
 	}
 

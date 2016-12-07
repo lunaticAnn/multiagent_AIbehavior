@@ -10,6 +10,7 @@ public class grid_node: MonoBehaviour,IHeapItem<grid_node>{
 	public SquareGrid.grid_stat state;
 	public V2Int grid_position;
 	public bool occupied{get;set;}
+    public bool not_ideal;
 
 	public float current_value{get;set;} //current_value???
 	public float last_value{get;set;}//last_value???
@@ -24,7 +25,8 @@ public class grid_node: MonoBehaviour,IHeapItem<grid_node>{
 	public grid_node(V2Int pos, SquareGrid.grid_stat g=SquareGrid.grid_stat.empty){
 		this.grid_position=pos;
 		this.state=g;
-		this.occupied=false;
+		this.occupied = false;
+        this.not_ideal = false; 
 		current_value=default_value;
 		last_value=default_value;
 	}

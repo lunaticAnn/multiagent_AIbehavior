@@ -1,0 +1,13 @@
+EvadorGetOut:1 Time:55.35556 Moves:200
+EvadorGetOut:1 Time:27.25598 Moves:98
+EvadorGetOut:1 Time:7.253468 Moves:26
+EvadorGetOut:2 Time:18.69489 Moves:68
+EvadorGetOut:2 Time:6.782251 Moves:25
+EvadorGetOut:1 Time:15.62173 Moves:58
+EvadorGetOut:1 Time:31.2499 Moves:115
+EvadorGetOut:2 Time:15.41994 Moves:57
+EvadorGetOut:1 Time:5.127173 Moves:19
+EvadorGetOut:1 Time:18.75719 Moves:70
+EvadorGetOut:2 Time:10.96454 Moves:40
+EvadorGetOut:1 Time:9.759636 Moves:36
+EvadorGetOut:1 Time:9.861309 Moves:37

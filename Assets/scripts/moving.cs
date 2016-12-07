@@ -34,14 +34,12 @@ public class moving : MonoBehaviour {
 	protected void move_to_grid(SquareGrid sg,grid_node target){
 		if(valid_check(sg,target)){
 			grid_node pn=sg.nodes.Find(n=>n.grid_position==target.grid_position);
-
 			//new node has been occupied
 			if(current_node!=null)current_node.occupied=false;
 			pn.occupied=true;
-			transform.SetParent(pn.gameObject.transform);
+            transform.SetParent(pn.gameObject.transform);
 			transform.localPosition=Vector3.zero+Vector3.back;
 			//set old_node.occupied=fasle
-
 			current_node=target;
 		}
 		else 

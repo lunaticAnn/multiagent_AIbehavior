@@ -80,6 +80,19 @@ public class SquareGrid  {
 			return neighbour;
 	}
 
+    //heuristic use
+    public List<grid_node> pure_neighbour(grid_node n)
+    {
+        List<grid_node> neighbour = new List<grid_node>();
+        foreach (orientation o in Four_dir) {
+            V2Int nb_pos = n.grid_position + (V2Int)orient[o];
+            grid_node nb = nodes.Find(such_node => such_node.grid_position == nb_pos);
+            if (nb!=null&&walkable(nb))
+                neighbour.Add(nb);
+         }
+        return neighbour;
+  
+    }
 
 
 }
