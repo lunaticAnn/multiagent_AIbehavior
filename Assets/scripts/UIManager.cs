@@ -15,5 +15,11 @@ public class UIManager : MonoBehaviour {
 		evador_score.text="evador:"+StageController.instance.score_evador;
         timer.text = Time.timeSinceLevelLoad.ToString();
         movecount.text = "Moves:" + StageController.instance.movecount.ToString();
+        /*
+        if (StageController.instance.movecount > 40) {
+            NNprocessor.instance.update_weights(NNprocessor.instance.current_index, 3);
+            //NNprocessor.instance.print_results();
+            Application.LoadLevel(0);
+        }*/
 	}
 }

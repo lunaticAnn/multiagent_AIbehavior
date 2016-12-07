@@ -7,8 +7,12 @@ public class NNprocessor : MonoBehaviour {
     TextAsset weights;
     List<float> current_weights;
     string parameter_path;
-    const int feature_num = 10;
+    public int current_index;
+
+    const int feature_num = 6;
+
     public static NNprocessor instance = null;
+    public Dictionary<int,int[]> order_index;
 
     // Use this for initialization
     void Awake () {
@@ -20,8 +24,26 @@ public class NNprocessor : MonoBehaviour {
             Destroy(gameObject);
         }
         parameter_path = Application.dataPath + "\\Resources\\param.txt";
-        Init_weights(feature_num, 1f);
-	}
+        init_source();
+        //current_index = Random.Range(0, feature_num);
+        current_index = 3; 
+    }
+
+    void init_source() {
+        order_index = new Dictionary<int, int[]>();
+        int[] order = new int[3] { 0, 1, 2 };
+        order_index[0] = order;
+        order = new int[3] { 0, 2, 1 };
+        order_index[1] = order;
+        order = new int[3] { 1, 0, 2 };
+        order_index[2] = order;
+        order = new int[3] { 1, 2, 0 };
+        order_index[3] = order;
+        order = new int[3] { 2, 0, 1 };
+        order_index[4] = order;
+        order = new int[3] { 2, 1, 0 };
+        order_index[5] = order;
+    }
 	
 	// Update is called once per frame
 	void Init_weights (int count,float init_par) {
@@ -31,7 +53,7 @@ public class NNprocessor : MonoBehaviour {
         sw.Close();
     }
 
-    void update_weights(List<float> new_par){
+    void write_weights(List<float> new_par){
         StreamWriter sw = new StreamWriter(parameter_path);
         for (int i = 0; i < new_par.Count; i++)
             sw.WriteLine(new_par[i]);
@@ -49,6 +71,13 @@ public class NNprocessor : MonoBehaviour {
         return my_params;
     }
 
+   public void update_weights(int index,float to_change)
+    {
+        List<float> my_weights = get_weights(feature_num);
+        my_weights[index] += to_change;
+        write_weights(my_weights); 
+    }
+
     void print_weights(List<float> weights) {
         for (int i = 0; i < weights.Count; i++) {
             Debug.Log("index "+i+":"+weights[i]);
@@ -56,7 +85,7 @@ public class NNprocessor : MonoBehaviour {
     }
 
     public void print_results() {
-       string data_path = Application.dataPath + "\\Resources\\results_IQ1.txt";
+       string data_path = Application.dataPath + "\\Resources\\_results.txt";
         StreamWriter sw = new StreamWriter(data_path,true);
         string s= "EvadorGetOut:" + StageController.instance.score_evador;
         s+=" Time:" + Time.timeSinceLevelLoad.ToString();

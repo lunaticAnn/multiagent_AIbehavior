@@ -28,17 +28,13 @@ public class GridsGenerator : MonoBehaviour {
 
 	private int[,] test=new int[4,5]{{0,0,0,0,0},{9,1,0,0,0},{0,0,0,1,0},{0,0,0,0,0}};
 
-   /* private int[,] test = new int[10, 10] 
-    { { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, 
-      { 9, 1, 0, 0, 0 , 0, 0, 0, 0, 0 },
-      { 0, 0, 0, 1, 0, 0, 0, 0, 0, 0  }, 
-      { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
-     { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
-     { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 , 0, 0, 0, 0, 0 }};*/
+    /*private int[,] test = new int[6, 7] 
+    { { 0, 0, 0, 0, 0, 0, 0 }, 
+      { 9, 1, 0, 0, 0 , 0, 0 },
+      { 0, 0, 0, 1, 0, 0, 0  }, 
+      { 0, 0, 0, 0, 0 , 0, 0},
+     { 0, 0, 0, 0, 0 , 0, 0},
+     { 0, 0, 0, 0, 0 , 0, 0}};*/
 
     /*=================================================
 	 * Inputs will be given in the form of grids that is:
@@ -159,11 +155,16 @@ public class GridsGenerator : MonoBehaviour {
 		GameObject robot_single=Instantiate(robot_prefab);
 		robot_single.SendMessage("init_self",convertor(rp));}
 
-		foreach(Vector2 vp in evador_position){
+        
+        StageController.instance.target_list = new Dictionary<int, evador_behave>();
+
+        int tglistindex = 0;
+        foreach (Vector2 vp in evador_position){
 			GameObject evador_single=Instantiate(evador_prefab);
 			evador_single.SendMessage("init_self",convertor(vp));
-		}
-			
+            StageController.instance.target_list[tglistindex] = evador_single.GetComponent<evador_behave>();
+            tglistindex++;
+        }	
 
 		StageController.instance.Stage_switch();
 	

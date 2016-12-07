@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Robots_controller : MonoBehaviour {
     public static Robots_controller instance = null;
-    public enum robot_state {hang,block_exit, corner_target};
+    public enum robot_state {hang,cooperate, defeat};
     public robot_state my_state;
 
     List<Robot_behave> my_robots;
@@ -42,7 +42,7 @@ public class Robots_controller : MonoBehaviour {
             my_robots.Add(_rb.GetComponent<Robot_behave>());
         }
         sg = GridsGenerator.instance.g;
-        my_state = robot_state.block_exit;
+        my_state = robot_state.defeat;
 
     }
 
@@ -51,10 +51,10 @@ public class Robots_controller : MonoBehaviour {
         //robots current positions
      
         switch (r) {
-            case robot_state.block_exit:
-                block_exit();
+            case robot_state.defeat:
+                corner_target(target);
                 return;
-            case robot_state.corner_target:
+            case robot_state.cooperate:
                 if (player_target.Count == 0)
                     create_target_list();
                 refresh_target_list();
