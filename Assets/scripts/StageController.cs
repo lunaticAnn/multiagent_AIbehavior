@@ -75,11 +75,12 @@ public class StageController : MonoBehaviour {
                     rb.SendMessage("guess_and_move");
 
                     StartCoroutine("stage_yield");*/
+
                     GameObject[] evador_instance = GameObject.FindGameObjectsWithTag("evador");
                     evador_behave target=evador_instance[0].GetComponent<evador_behave>();
                     //Robots_controller.instance.update_state(Robots_controller.robot_state.block_exit);
                     Robots_controller.instance.update_state(Robots_controller.robot_state.corner_target,target);
-                    evador_instance[0].SendMessage("flash_me");
+                    //evador_instance[0].SendMessage("flash_me");
                 }
                 return;
 

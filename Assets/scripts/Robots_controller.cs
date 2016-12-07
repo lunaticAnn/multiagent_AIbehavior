@@ -55,11 +55,11 @@ public class Robots_controller : MonoBehaviour {
                 block_exit();
                 return;
             case robot_state.corner_target:
-                /*if (player_target.Count == 0)
+                if (player_target.Count == 0)
                     create_target_list();
                 refresh_target_list();
-                evador_behave target_evador = Find_target(player_target);*/
-                corner_target(target);
+                evador_behave target_evador = Find_target(player_target);
+                corner_target(target_evador);
                 return;
         }
         //target
@@ -75,6 +75,7 @@ public class Robots_controller : MonoBehaviour {
         if (target == null)
         {
             Debug.LogWarning("No target to be corner.");
+            block_exit();
             return;
         }
         else {
@@ -161,7 +162,7 @@ public class Robots_controller : MonoBehaviour {
         area intersect1 = intersection(a1, target);
         area intersect2 = intersection(a2, target);
         int score = intersect1.pos_in_area.Count+intersect2.pos_in_area.Count;
-        
+        //better if target intersect with center in
         area overlay = intersection(intersect1, intersect2);
         score -= overlay.pos_in_area.Count;
         return score;
@@ -242,14 +243,14 @@ public class Robots_controller : MonoBehaviour {
         foreach (evador_behave eb in t)
         {
             reward = 0;
-            if ((int)previous_step[eb] >= current_step[eb])
+            if (previous_step[eb] >= current_step[eb])
             {
-                reward = -30 * rf_factor[eb];
+                reward = -5 * rf_factor[eb];
                 rf_factor[eb] += 1;
 
             }
             else { rf_factor[eb] = 1; }//clear target threat;
-            //reward += Manhattan(current_node.grid_position, eb.current_node.grid_position);
+            reward += current_step[eb];
             if (target_now == null)
             {
                 target_now = eb;
